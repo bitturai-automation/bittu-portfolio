@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bittu Rai — UI/UX &amp; Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<a href="https://wa.me/919142515509" target="_blank" id="wa-float" class="magnetic" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.51 2 12.04 2Zm5.8 14.07c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.02.24-3.42-.71-2.9-1.15-4.77-4.1-4.92-4.29-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.29.15.46.12.63-.07.17-.19.72-.84.92-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.29.14.48.22.55.33.07.12.07.67-.17 1.35Z"/></svg>
+</a>
+<div id="wa-tooltip">Let's Talk</div>
+
+<!-- NAV -->
+<nav class="nav on-dark" id="nav">
+  <div class="container">
+    <div class="nav-bar">
+      <a href="#top" class="logo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="currentColor"/></svg>
+        <span class="logo-text">Bittu Rai</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#work">My Work</a>
+        <a href="#experience">Resume</a>
+        <a href="#contact" class="nav-cta magnetic">Get in touch<span class="cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="8 5 19 5 19 16"/></svg></span></a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <svg class="hero-lines" aria-hidden="true" viewBox="0 0 1360 800" preserveAspectRatio="xMidYMid slice">
+    <path d="M40,120 C300,220 420,60 700,160 S1100,260 1320,140"></path>
+    <path d="M0,520 C220,420 480,620 760,500 S1180,420 1360,540"></path>
+    <path d="M120,20 C160,220 100,420 220,700"></path>
+    <path d="M1240,40 C1200,240 1280,440 1160,760"></path>
+    <circle cx="700" cy="160" r="3"></circle>
+    <circle cx="220" cy="700" r="2.5"></circle>
+    <circle cx="1160" cy="760" r="2.5"></circle>
+    <circle cx="40" cy="120" r="2.5"></circle>
+  </svg>
+  <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+  <div class="hero-visual">
+  <div class="hero-photo-fade" aria-hidden="true"></div>
+  <div class="hero-bigname-wrap">
+    <div class="container"><div class="hero-bigname">BITTU RAI</div></div>
+  </div>
+  <div class="hero-orbit" id="heroOrbit" aria-hidden="true"></div>
+  <div class="hero-photo">
+    <img src="assets/images/hero-portrait-3a4610b3ee.png" alt="Bittu Rai portrait">
+  </div>
+  </div>
+  <div class="hero-top-wrap">
+    <div class="container hero-top">
+      <div class="hero-left">
+        <span class="hero-badge-pill"><span class="dot"></span>Available for Work</span>
+        <h1 class="hero-heading-v2">Brand &amp; <span class="hl-word">UI/UX</span><br>Designer based<br>in Delhi</h1>
+      </div>
+      <div class="hero-right-v2">
+        <p class="hero-intro">Hi, I'm <b>Bittu Rai</b> — a UI/UX and brand designer passionate about creating seamless digital experiences that connect and convert.</p>
+        <a href="#work" class="hero-cta magnetic"><span class="hero-cta-icon" aria-hidden="true">→</span>See my works</a>
+        <div class="hero-tag-marquee" aria-hidden="true">
+          <div class="hero-tag-track">
+            <span class="hero-tag-group">
+              <span class="htag">✦ UI/UX</span>
+              <span class="htag">✦ Branding</span>
+              <span class="htag">✦ Figma</span>
+              <span class="htag">✦ Web Design</span>
+              <span class="htag">✦ Motion</span>
+            </span>
+            <span class="hero-tag-group">
+              <span class="htag">✦ UI/UX</span>
+              <span class="htag">✦ Branding</span>
+              <span class="htag">✦ Figma</span>
+              <span class="htag">✦ Web Design</span>
+              <span class="htag">✦ Motion</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-item">UI/UX Design <span>✦</span></span>
+      <span class="marquee-item">Graphic Design <span>✦</span></span>
+      <span class="marquee-item">Web Development <span>✦</span></span>
+      <span class="marquee-item">Branding <span>✦</span></span>
+      <span class="marquee-item">AI Automation <span>✦</span></span>
+      <span class="marquee-item">Digital Marketing <span>✦</span></span>
+    </div>
+    <div class="marquee-group">
+      <span class="marquee-item">UI/UX Design <span>✦</span></span>
+      <span class="marquee-item">Graphic Design <span>✦</span></span>
+      <span class="marquee-item">Web Development <span>✦</span></span>
+      <span class="marquee-item">Branding <span>✦</span></span>
+      <span class="marquee-item">AI Automation <span>✦</span></span>
+      <span class="marquee-item">Digital Marketing <span>✦</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- TRUSTED BY -->
+<section class="trusted">
+  <div class="container">
+    <div class="trusted-label reveal">Companies I've Worked With</div>
+  </div>
+  <div class="marquee-track reveal"><div class="marquee-row dir-left" id="marqueeRow1"></div></div>
+  <div class="marquee-track reveal"><div class="marquee-row dir-right" id="marqueeRow2"></div></div>
+</section>
+
+<!-- TRUST STATS -->
+<section class="stats-trust" id="stats">
+  <div class="container">
+    <div class="stats-head reveal">
+      <div class="eyebrow" style="color:var(--gold);">By The Numbers</div>
+      <h2 class="stats-heading">Trusted by Brands.<br>Backed by Results.</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-num"><span class="counter" data-target="4">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span class="counter" data-target="120">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span class="counter" data-target="35">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num"><span class="counter" data-target="15">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Industries Served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="work">
+  <div class="services-blob b1"></div>
+  <div class="services-blob b2"></div>
+  <div class="services-bg-world" id="svcWorld">
+    <div class="world-layer w-uiux" data-world="uiux">
+      <div class="world-shape world-float w-box" style="top:14%;left:8%;width:120px;height:80px;"></div>
+      <div class="world-shape world-float rev w-box" style="top:58%;left:16%;width:70px;height:50px;"></div>
+      <div class="world-shape world-float slow w-box" style="top:22%;right:12%;width:100px;height:64px;"></div>
+      <div class="world-shape world-float w-box" style="bottom:14%;right:20%;width:60px;height:60px;border-radius:50%;"></div>
+      <div class="world-shape w-dot" style="top:40%;left:38%;"></div>
+      <div class="world-shape w-dot" style="top:46%;left:44%;"></div>
+      <div class="world-shape w-dot" style="top:40%;left:50%;"></div>
+      <div class="world-shape w-dot" style="bottom:30%;right:38%;"></div>
+    </div>
+    <div class="world-layer w-webdev" data-world="webdev">
+      <div class="world-shape world-float w-browser" style="top:12%;left:6%;width:180px;height:120px;"></div>
+      <div class="world-shape world-float rev slow w-browser" style="bottom:10%;right:8%;width:150px;height:100px;"></div>
+      <div class="world-shape w-line" style="top:30%;left:14%;width:60px;"></div>
+      <div class="world-shape w-line" style="top:37%;left:14%;width:40px;"></div>
+      <div class="world-shape w-line" style="bottom:24%;right:18%;width:54px;"></div>
+    </div>
+    <div class="world-layer w-vibe" data-world="vibe">
+      <div class="world-shape w-particle" style="top:20%;left:14%;width:8px;height:8px;"></div>
+      <div class="world-shape w-particle" style="top:60%;left:10%;width:5px;height:5px;animation-delay:.6s;"></div>
+      <div class="world-shape w-particle" style="top:32%;right:16%;width:6px;height:6px;animation-delay:1.1s;"></div>
+      <div class="world-shape w-particle" style="bottom:18%;right:22%;width:9px;height:9px;animation-delay:.3s;"></div>
+      <div class="world-shape w-ring" style="top:16%;right:10%;width:130px;height:130px;"></div>
+      <div class="world-shape w-ring rev" style="bottom:8%;left:8%;width:170px;height:170px;"></div>
+    </div>
+    <div class="world-layer w-graphic" data-world="graphic">
+      <div class="world-shape world-float w-swatch" style="top:16%;left:10%;width:46px;height:46px;background:var(--orange);"></div>
+      <div class="world-shape world-float rev w-swatch" style="top:30%;left:22%;width:30px;height:30px;background:var(--gold);"></div>
+      <div class="world-shape world-float slow w-swatch" style="bottom:20%;right:14%;width:38px;height:38px;background:#5ee08a;"></div>
+      <div class="world-shape w-poster" style="top:12%;right:10%;width:80px;height:104px;"></div>
+      <div class="world-shape w-poster" style="bottom:12%;left:16%;width:64px;height:84px;"></div>
+    </div>
+    <div class="world-layer w-brand" data-world="brand">
+      <div class="world-shape world-float w-badge" style="top:18%;left:12%;width:90px;height:90px;"></div>
+      <div class="world-shape world-float rev slow w-badge" style="bottom:14%;right:12%;width:120px;height:120px;"></div>
+      <svg class="world-shape w-mark world-float" style="top:44%;left:44%;width:26px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
+    </div>
+  </div>
+  <div class="container">
+    <div class="services-head reveal">
+      <span class="hero-title-eyebrow"><span class="line"></span>My Work</span>
+      <h2 class="services-heading">A look at what I've <span class="layer2">built</span></h2>
+      <p class="services-sub">A showcase of the design, development and branding work I've shipped so far.</p>
+    </div>
+    <div class="services-grid reveal" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- SERVICE MODAL -->
+<div class="svc-modal-backdrop" id="svcModal">
+  <button class="svc-modal-close" id="svcModalClose"><span class="icon" data-icon="x"></span></button>
+  <div class="svc-modal-content" id="svcModalContent"></div>
+</div>
+<!-- LIGHTBOX (fullscreen image preview) -->
+<div class="svc-lightbox" id="svcLightbox">
+  <button class="svc-lightbox-close" id="svcLightboxClose"><span class="icon" data-icon="x"></span></button>
+  <img id="svcLightboxImg" src="" alt="">
+</div>
+
+<!-- HERO ORBIT PROJECT MODAL -->
+<div class="orbit-modal-backdrop" id="orbitModal">
+  <div class="orbit-modal-card" id="orbitModalCard">
+    <button class="orbit-modal-close" id="orbitModalClose"><span class="icon" data-icon="x"></span></button>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="container">
+    <div class="industries-head reveal">
+      <div class="eyebrow" style="color:var(--gold);">Where I've Worked</div>
+      <h2 class="industries-heading">Industries I've<br>Designed For</h2>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Healthcare</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Technology</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Agriculture</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>AI &amp; SaaS</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Beauty</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Jewellery</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Cafe &amp; Restaurant</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Education</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Real Estate</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Manufacturing</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>E-commerce</div>
+      <div class="industry-pill reveal"><span class="ind-dot"></span>Fitness</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2 class="about-heading">Hello,<br>I'm Bittu.</h2>
+      <p class="about-copy">I'm a self-taught-turned-formally-trained UI/UX and Product Designer based in New Delhi. I spend my days building design systems and interfaces at Virtualyyst, and my nights running Shobha Motive — my own studio for web design, branding and AI-driven digital products. I care about systems that hold up under real production pressure, not just pretty screens.</p>
+      <div class="about-stats">
+        <div class="about-stat"><b>4+</b><span>Years Experience</span></div>
+        <div class="about-stat"><b>100+</b><span>Projects Delivered</span></div>
+        <div class="about-stat"><b>2</b><span>Active Studios</span></div>
+      </div>
+      <div class="about-btns">
+        <a href="https://www.linkedin.com/in/bitturai/" target="_blank" rel="noopener" class="btn btn-outline magnetic" style="border-color:rgba(17,17,17,.25);color:var(--black);"><span class="icon btn-icon" data-icon="linkedin"></span>LinkedIn</a>
+        <button class="btn btn-primary magnetic js-download-resume"><span class="icon btn-icon" data-icon="download"></span>Download Resume</button>
+      </div>
+    </div>
+    <div class="about-media reveal">
+      <span class="about-media-word" aria-hidden="true">Designer</span>
+      <div class="about-photo-blob">
+        <div class="frame">
+        <img src="assets/images/about-portrait-c8ad476754.jpg" alt="Bittu Rai portrait">
+      </div>
+      </div>
+      <div class="washi-tape" aria-hidden="true"></div>
+      <div class="stamp-sticker" aria-hidden="true">
+        <div class="stamp-ring"></div>
+        <div class="stamp-spin">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="aboutSpinPath" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path>
+            </defs>
+            <text>
+              <textPath href="#aboutSpinPath">Available for Work • Available for Work • </textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="stamp-center"><span class="dot"></span></div>
+      </div>
+      <div class="location-tag"><span class="dot2"></span>Delhi, India</div>
+      <div class="skill-chip sc1"><span class="dot3"></span>Figma</div>
+      <div class="skill-chip sc2"><span class="dot3"></span>UI/UX Design</div>
+      <div class="skill-chip sc3"><span class="dot3"></span>Webflow</div>
+      <div class="skill-chip sc4"><span class="dot3"></span>Branding</div>
+      <div class="skill-chip sc5"><span class="dot3"></span>Framer</div>
+      <div class="skill-chip sc6"><span class="dot3"></span>Design Systems</div>
+    </div>
+  </div>
+</section>
+
+<section class="eduexp" id="experience">
+  <div class="sec-glow" aria-hidden="true"></div>
+  <div class="sec-grid" aria-hidden="true"></div>
+  <svg class="sec-lines" aria-hidden="true" viewBox="0 0 1360 800" preserveAspectRatio="xMidYMid slice">
+    <path d="M40,120 C300,220 420,60 700,160 S1100,260 1320,140"></path>
+    <path d="M0,520 C220,420 480,620 760,500 S1180,420 1360,540"></path>
+    <path d="M120,20 C160,220 100,420 220,700"></path>
+    <path d="M1240,40 C1200,240 1280,440 1160,760"></path>
+    <circle cx="700" cy="160" r="3"></circle>
+    <circle cx="220" cy="700" r="2.5"></circle>
+    <circle cx="1160" cy="760" r="2.5"></circle>
+  </svg>
+  <div class="sec-particles" id="eduexpParticles" aria-hidden="true"></div>
+  <div class="eduexp-bg">RESUME<br>RESUME</div>
+  <div class="container">
+    <div class="eduexp-top">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--gold);">Education</span>
+        <h3 class="block-h">Background</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2021 — 2025</div>
+            <div class="tl-role">B.Tech, Lingayas Vidyapeeth</div>
+            <div class="tl-detail">Faridabad, India</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">Certifications</div>
+            <div class="tl-role">UI/UX &amp; Prompt Engineering</div>
+            <div class="tl-detail">ITRONIX · LinkedIn Learning · UpGrad · Google · Coursera</div>
+          </div>
+        </div>
+        <div class="edu-skills">
+          <a href="https://www.behance.net/bittu_" target="_blank" rel="noopener" class="edu-skills-head">Skills</a>
+
+          <div class="skill-cat">
+            <span class="skill-cat-name">UI/UX</span>
+            <div class="skill-pills">
+              <span class="skill-pill">Figma</span><span class="skill-pill">Wireframing</span><span class="skill-pill">User Flows</span><span class="skill-pill">Design Systems</span><span class="skill-pill">Prototyping</span><span class="skill-pill">Responsive Design</span><span class="skill-pill">User Research</span>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-cat-name">Visual</span>
+            <div class="skill-pills">
+              <span class="skill-pill">Branding</span><span class="skill-pill">Photoshop</span><span class="skill-pill">Illustrator</span><span class="skill-pill">Canva</span><span class="skill-pill">Marketing Creatives</span><span class="skill-pill">Graphic Design</span>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-cat-name">Frontend</span>
+            <div class="skill-pills">
+              <span class="skill-pill">HTML</span><span class="skill-pill">CSS</span><span class="skill-pill">WordPress</span><span class="skill-pill">Flutter Basics</span>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-cat-name">AI &amp; Auto</span>
+            <div class="skill-pills">
+              <span class="skill-pill">Prompt Engineering</span><span class="skill-pill">AI Tools</span><span class="skill-pill">n8n</span><span class="skill-pill">Workflow Automation</span><span class="skill-pill">Vibe Coding</span>
+            </div>
+          </div>
+
+          <div class="skill-note">Proven ability to manage multiple projects and meet deadlines in a fast-paced environment.</div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal">
+        <span class="eyebrow">Experience</span>
+        <h3 class="block-h">Where I've worked</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2023 — Present</div>
+            <div class="tl-role">Freelance UI/UX Designer</div>
+            <div class="tl-detail">100+ end-to-end projects for startups &amp; international clients</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2023 — 2026</div>
+            <div class="tl-role">Virtualyyst</div>
+            <div class="tl-detail">UI/UX &amp; Graphic Designer — promoted to full-time, 2025</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2024</div>
+            <div class="tl-role">Creative Canvas</div>
+            <div class="tl-detail">Brand identity &amp; visual systems for startups and SMBs</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2022 — 2025</div>
+            <div class="tl-role">Adsstill Group</div>
+            <div class="tl-detail">Photo &amp; video creative for brand campaigns</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2022 — 2023</div>
+            <div class="tl-role">StartupAccel</div>
+            <div class="tl-detail">Branding &amp; campaign visuals for early-stage startups</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">#SystemsFirst</span>
+          <span class="tag">#DetailOriented</span>
+          <span class="tag">#Adaptability</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="eduexp-bottom">
+      <div class="reveal">
+        <div class="skill-group">
+          <h4>Language</h4>
+          <div class="lang-row">English <span>Fluent</span></div>
+          <div class="lang-row">Hindi <span>Native</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skill-group">
+          <h4>Leadership</h4>
+          <div class="act-item">
+            <div class="act-year">2 Years</div>
+            <p>Head, Branding &amp; Media Committee — College Fest. Best Innovating Committee Award.</p>
+          </div>
+          <div class="act-item">
+            <div class="act-year">2022</div>
+            <p>Volunteer designer — Suvidha &amp; Aashman Foundation awareness campaigns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-cert-grid reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--gold);">Projects</span>
+        <h3 class="block-h">Things I've built</h3>
+        <div class="proj-list">
+          <div class="proj-item">
+            <div class="proj-item-head">
+              <h4>Client Website Design <span>(Frontend + WordPress)</span></h4>
+              <span class="date-pill">June 2025</span>
+            </div>
+            <ul>
+              <li>Designed website UI and page structure</li>
+              <li>Implemented frontend layout using HTML &amp; CSS</li>
+              <li>Managed pages and content using WordPress CMS</li>
+              <li>Focused on responsive design and clean user experience</li>
+            </ul>
+          </div>
+          <div class="proj-item">
+            <div class="proj-item-head">
+              <h4>Emotion Detection</h4>
+              <span class="date-pill">Dec 2024</span>
+            </div>
+            <ul>
+              <li>Implemented facial expression analysis to classify emotions accurately</li>
+              <li>Improved real-time emotion recognition for better user engagement</li>
+            </ul>
+          </div>
+          <div class="proj-item">
+            <div class="proj-item-head">
+              <h4>Media Controller Using Hand Gestures</h4>
+              <span class="date-pill">June 2024</span>
+            </div>
+            <ul>
+              <li>Enabled gesture-based media control for intuitive, touch-free interaction</li>
+              <li>Enhanced user experience with a convenient and hygienic control method</li>
+            </ul>
+          </div>
+          <div class="proj-item">
+            <div class="proj-item-head">
+              <h4>Decentralised Twitter</h4>
+              <span class="date-pill">Oct 2023</span>
+            </div>
+            <ul>
+              <li>User-controlled data: users own and control their data, enhancing privacy and security</li>
+              <li>Censorship-resistant: operates on a decentralized network, reducing the risk of censorship and promoting free speech</li>
+            </ul>
+          </div>
+          <div class="proj-item">
+            <div class="proj-item-head">
+              <h4>Chatbot Movie Recommendation System</h4>
+              <span class="date-pill">May 2023</span>
+            </div>
+            <ul>
+              <li>Personalized recommendations: offers movie suggestions based on user preferences</li>
+              <li>Interactive interface: engages users with a conversational, easy-to-use chatbot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-panel">
+        <span class="eyebrow" style="color:var(--gold);">Certificates</span>
+        <h3 class="block-h">Courses &amp; Certifications</h3>
+        <ul class="cert-list">
+          <li>Data Analytics Job Simulation — <b>Deloitte</b></li>
+          <li>SQL — <b>Hackerrank</b></li>
+          <li>Brand New Brand — <b>Coursera</b></li>
+          <li>Data Visualisation — <b>Tata</b></li>
+          <li>Introduction to Graphic Design — <b>Basics of UI/UX</b></li>
+          <li>Graphic Designer — <b>LinkedIn</b></li>
+          <li>UI and UX Design — <b>ITRONIX</b></li>
+          <li>Introduction to Generative AI</li>
+          <li>Advanced Prompt Engineering with ChatGPT — <b>UpGrad</b></li>
+          <li>Basic Elements of C++ — <b>CareerNinja</b></li>
+          <li>Programming with Python — <b>UpGrad</b></li>
+          <li>Element of Social Media Marketing — <b>CareerNinja</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="process-head reveal">
+      <span class="eyebrow">How I Work</span>
+      <h2 class="process-heading">My Process</h2>
+    </div>
+    <div class="p-line">
+      <div class="p-track"><div class="p-fill" id="pFill"></div></div>
+      <div class="p-steps" id="pSteps"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="sec-glow" aria-hidden="true"></div>
+  <div class="sec-grid" aria-hidden="true"></div>
+  <svg class="sec-lines" aria-hidden="true" viewBox="0 0 1360 800" preserveAspectRatio="xMidYMid slice">
+    <path d="M40,120 C300,220 420,60 700,160 S1100,260 1320,140"></path>
+    <path d="M0,520 C220,420 480,620 760,500 S1180,420 1360,540"></path>
+    <path d="M120,20 C160,220 100,420 220,700"></path>
+    <path d="M1240,40 C1200,240 1280,440 1160,760"></path>
+    <circle cx="700" cy="160" r="3"></circle>
+    <circle cx="220" cy="700" r="2.5"></circle>
+    <circle cx="1160" cy="760" r="2.5"></circle>
+  </svg>
+  <div class="sec-particles" id="testiParticles" aria-hidden="true"></div>
+  <div class="container">
+    <div class="testi-head reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--gold);">Kind Words</span>
+        <h2 class="testi-heading">What people say</h2>
+      </div>
+      <div class="testi-controls">
+        <button class="testi-arrow magnetic" id="testiPrev"><span class="icon" data-icon="chevron-left"></span></button>
+        <button class="testi-arrow magnetic" id="testiNext"><span class="icon" data-icon="chevron-right"></span></button>
+      </div>
+    </div>
+    <div class="testi-viewport reveal">
+      <div class="testi-track" id="testiTrack"></div>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-orb o1"></div>
+  <div class="contact-orb o2"></div>
+  <div class="contact-bg">LET'S TALK</div>
+  <div class="container contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 class="contact-heading">Let's build<br>something <em>together.</em></h2>
+      <p class="contact-sub">Have a product that needs an interface, or a brand that needs a system? Reach out directly — I read every message myself.</p>
+      <div class="cc-btns">
+        <a href="mailto:bitturai21126@gmail.com" class="btn btn-primary magnetic" style="color:var(--black);"><span class="icon btn-icon" data-icon="mail"></span>Send Email</a>
+        <a href="https://wa.me/919142515509" target="_blank" class="btn btn-outline magnetic" style="border-color:rgba(17,17,17,.25);color:var(--black);"><span class="icon btn-icon" data-icon="message-circle"></span>Chat on WhatsApp</a>
+        <button class="btn btn-outline magnetic js-download-resume" style="border-color:rgba(17,17,17,.25);color:var(--black);"><span class="icon btn-icon" data-icon="download"></span>Download Resume</button>
+      </div>
+      <div class="contact-side-note"><span class="icon" data-icon="clock"></span>Usually replies within a few hours, always within a day.</div>
+    </div>
+    <div class="contact-card-wrap reveal">
+      <div class="contact-card glass-light">
+        <span class="cc-status"><span class="cc-status-dot"></span>Open to new projects</span>
+        <div class="cc-row">
+          <div class="cc-icon"><span class="icon" data-icon="map-pin"></span></div>
+          <div><div class="cc-label">Location</div><div class="cc-value">Delhi, India</div></div>
+        </div>
+        <div class="cc-row">
+          <div class="cc-icon"><span class="icon" data-icon="mail"></span></div>
+          <div><div class="cc-label">Email</div><div class="cc-value"><a href="mailto:bitturai21126@gmail.com">bitturai21126@gmail.com</a></div></div>
+        </div>
+        <div class="cc-row">
+          <div class="cc-icon"><span class="icon" data-icon="phone"></span></div>
+          <div><div class="cc-label">Phone / WhatsApp</div><div class="cc-value"><a href="https://wa.me/919142515509" target="_blank" rel="noopener">+91 91425 15509</a></div></div>
+        </div>
+        <div class="cc-row">
+          <div class="cc-icon"><span class="icon" data-icon="calendar-check"></span></div>
+          <div>
+            <div class="cc-label">Availability</div>
+            <div class="cc-avail">
+              <span><span class="icon" data-icon="check"></span>Remote Work</span>
+              <span><span class="icon" data-icon="check"></span>Freelance</span>
+              <span><span class="icon" data-icon="check"></span>Startup Opportunities</span>
+            </div>
+          </div>
+        </div>
+        <div class="cc-card-foot"><span class="icon" data-icon="zap"></span><span>Based in Delhi, working with teams worldwide.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <span>© 2026 Bittu Rai. All rights reserved.</span>
+    <span>Designed &amp; built by Bittu Rai</span>
+  </div>
+</footer>
+
+
+<!-- ============ SCRIPTS ============ -->
+<!-- Each module below only *defines* its init function(s); nothing runs
+     until main.js calls them at the bottom, in the correct order, once
+     every module has loaded. -->
+
+<!-- Sticky nav + mobile menu -->
+<script src="js/navigation.js"></script>
+<!-- Custom cursor + magnetic buttons + hero parallax -->
+<script src="js/cursor.js"></script>
+<!-- Service / gallery / hero-orbit modals -->
+<script src="js/modal.js"></script>
+<!-- Card renders, carousels, marquee, particles, hero orbit -->
+<script src="js/animations.js"></script>
+<!-- GSAP entrance timeline + ScrollTrigger reveals -->
+<script src="js/gsap.js"></script>
+<!-- Data, icon system, small widgets, and app bootstrap (runs last) -->
+<script src="js/main.js"></script>
+</body>
+</html>
