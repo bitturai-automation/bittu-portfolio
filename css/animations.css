@@ -1,0 +1,85 @@
+/* ==========================================================================
+   ANIMATIONS.CSS
+   Keyframe animations used across the site, plus every :hover / interactive
+   state effect (buttons, cards, links, pills). GSAP-driven motion itself
+   lives in JS (see js/gsap.js) — the styles below are the CSS side of it
+   (transition timing, transform origins, etc. already declared alongside
+   each component in style.css).
+   ========================================================================== */
+
+/* ============ KEYFRAMES ============ */
+@keyframes heroGridDrift{from{background-position:0 0,0 0;}to{background-position:54px 54px,54px 54px;}}
+@keyframes heroFloat{
+  0%{transform:translateY(0) translateX(0);opacity:0;}
+  10%{opacity:.6;}
+  50%{transform:translateY(-26px) translateX(8px);}
+  90%{opacity:.55;}
+  100%{transform:translateY(-52px) translateX(-6px);opacity:0;}
+}
+@keyframes heroDash{to{stroke-dashoffset:-500;}}
+@keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes heroBadgePulse{0%{box-shadow:0 0 0 0 rgba(243,123,58,.5);}70%{box-shadow:0 0 0 7px rgba(243,123,58,0);}100%{box-shadow:0 0 0 0 rgba(243,123,58,0);}}
+@keyframes spin-slow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes sticker-float{0%,100%{transform:translateY(0) rotate(var(--r,-6deg));}50%{transform:translateY(-7px) rotate(var(--r,-6deg));}}
+@keyframes pulse-dot{0%{box-shadow:0 0 0 0 rgba(94,224,138,.55);}70%{box-shadow:0 0 0 9px rgba(94,224,138,0);}100%{box-shadow:0 0 0 0 rgba(94,224,138,0);}}
+@keyframes marquee-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes marquee-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+@keyframes world-float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-22px) rotate(4deg);}}
+@keyframes world-pulse{0%,100%{opacity:.25;transform:scale(1);}50%{opacity:.65;transform:scale(1.12);}}
+@keyframes world-drift{0%{transform:translate(0,0);}50%{transform:translate(14px,-16px);}100%{transform:translate(0,0);}}
+@keyframes wa-pulse{0%,100%{box-shadow:0 8px 30px rgba(37,155,88,.45),0 0 0 0 rgba(37,155,88,.45);}50%{box-shadow:0 8px 30px rgba(37,155,88,.45),0 0 0 12px rgba(37,155,88,0);}}
+
+/* ============ HOVER / INTERACTIVE STATE EFFECTS ============ */
+.nav-links a:hover::after{width:100%;}
+.nav-cta:hover::before{transform:scaleX(1);transform-origin:left;}
+.nav-cta:hover{color:var(--black);box-shadow:0 8px 24px -8px rgba(242,166,35,.55);}
+.nav-cta:hover .cta-arrow{background:rgba(17,17,17,.12);transform:rotate(45deg);}
+.nav.on-dark .nav-cta:hover{color:var(--black);}
+.hero-orbit-node:hover,.hero-orbit-node:focus-visible{filter:none;box-shadow:0 0 0 2px var(--orange),0 14px 36px rgba(0,0,0,.4);}
+.hero-orbit-node:hover img,.hero-orbit-node:focus-visible img{filter:none;}
+.hero-orbit-node:hover .hero-orbit-tip,.hero-orbit-node:focus-visible .hero-orbit-tip{opacity:1;transform:translateX(-50%) translateY(0);}
+.marquee-track:hover{animation-play-state:paused;}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(243,123,58,.6);}
+.hero-cta:hover .hero-cta-icon{transform:translateX(2px) rotate(8deg);}
+.vibe-card:hover .vibe-image img{transform:scale(1.03);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(242,166,35,.6);}
+.btn-outline:hover{background:rgba(17,17,17,.06);transform:translateY(-2px);}
+.btn-outline-dark:hover{background:rgba(247,243,235,.1);transform:translateY(-2px);}
+.stat-card:hover{transform:translateY(-6px);background:rgba(247,243,235,.1);box-shadow:0 22px 46px -18px rgba(0,0,0,.4);border-color:rgba(242,166,35,.35);}
+.stat-card:hover::before{transform:scaleX(1);}
+.industry-pill:hover{color:var(--black);border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 34px -14px rgba(242,166,35,.45);}
+.industry-pill:hover::before{transform:scale(1);}
+.industry-pill:hover .ind-dot{background:var(--black);transform:scale(1.3);}
+.about-media:hover .about-photo-blob .frame{border-radius:45% 55% 60% 40%/40% 45% 55% 60%;transform:scale(1.02);}
+.edu-skills-head:hover{color:var(--cream);border-color:var(--cream);}
+.cert-list li a:hover{color:var(--gold);border-color:var(--gold);}
+.filter-btn.active,.filter-btn:hover{background:var(--green);border-color:var(--green);color:var(--cream);}
+.g-card:hover img{transform:scale(1.06);}
+.g-card:hover .g-card-overlay{opacity:1;}
+.modal-close:hover{transform:rotate(90deg) scale(1.06);box-shadow:0 10px 30px -8px rgba(242,166,35,.55);}
+.modal-nav:hover{box-shadow:0 10px 30px -8px rgba(242,166,35,.55);}
+.modal-close:hover,.modal-nav:hover{background:var(--gold);color:var(--black);}
+.p-step:hover .p-step-inner{transform:translateY(-8px);background:rgba(17,17,17,.055);border-color:rgba(242,166,35,.5);box-shadow:0 18px 36px rgba(17,17,17,.14);}
+.marquee-track:hover .marquee-row{animation-play-state:paused;}
+.logo-item:hover{opacity:1;filter:grayscale(0) saturate(1);transform:scale(1.06);box-shadow:0 14px 30px rgba(17,17,17,.18);}
+.testi-arrow:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+.svc-card:hover{box-shadow:0 1px 0 rgba(247,243,235,.08) inset,0 46px 80px -28px rgba(0,0,0,.55),0 0 0 1px rgba(242,166,35,.25);transform:translateY(-4px);}
+.svc-card:hover .svc-card-inner{background:linear-gradient(160deg,#1a4d2e 0%,#12291a 45%,#141414 100%);}
+.svc-card:hover .svc-card-inner::after{opacity:1;transform:translate(2px,-2px);}
+.svc-card:hover .svc-spot{opacity:1;}
+.svc-card:hover .svc-icon-wrap::after{opacity:1;}
+.svc-card:hover .svc-icon-wrap{transform:translateY(-4px) rotate(-6deg) scale(1.08);background:linear-gradient(150deg,rgba(242,166,35,.3),rgba(242,166,35,.1));border-color:rgba(242,166,35,.55);}
+.svc-card:hover .svc-arrow{transform:scale(1.12) rotate(6deg);box-shadow:0 12px 26px -6px rgba(242,166,35,.7);}
+.svc-card:hover .svc-arrow .icon{transform:translate(2px,-2px);}
+.svc-modal-close:hover{background:var(--gold);color:var(--black);border-color:var(--gold);transform:rotate(90deg) scale(1.06);box-shadow:0 10px 30px -8px rgba(242,166,35,.55);}
+.svc-showcase-card:hover .svc-showcase-preview img{transform:scale(1.05);}
+.svc-vibe-card:hover .svc-open-btn{background:var(--gold);color:var(--black);border-color:var(--gold);}
+.svc-gallery-item:hover img{transform:scale(1.05);}
+.svc-gallery-item:hover .svc-gallery-overlay{opacity:1;}
+.svc-lightbox-close:hover{background:var(--gold);color:var(--black);border-color:var(--gold);transform:rotate(90deg) scale(1.06);box-shadow:0 10px 30px -8px rgba(242,166,35,.55);}
+.cc-row:hover{background:rgba(242,166,35,.07);transform:translateX(4px);border-color:transparent;}
+.cc-row:hover .cc-icon{background:var(--gold);color:var(--black);transform:rotate(-6deg) scale(1.05);}
+.cc-value a:hover{border-color:currentColor;}
+.cc-avail span:hover{background:var(--green);color:var(--cream);}
+#wa-float:hover{box-shadow:0 10px 40px rgba(37,155,88,.6),0 0 0 10px rgba(37,155,88,.12);}
+#wa-float:hover ~ #wa-tooltip, #wa-float.tt-show ~ #wa-tooltip{opacity:1;transform:translateX(0);}
