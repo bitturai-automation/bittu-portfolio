@@ -241,7 +241,7 @@ button{font-family:inherit;border:none;cursor:none;}
   @keyframes heroCardWobble{0%,100%{transform:rotate(5deg);}50%{transform:rotate(7deg);}}
   /* rotated sticker badge stamped over the bottom-right corner of the photo */
   .hero-visual::after{
-    content:'4+ Yrs Exp ✦';
+    content:'2+ Yrs Exp ✦';
     position:absolute;bottom:-14px;right:-16px;z-index:4;
     background:var(--cream);
     color:var(--green);font-family:var(--mono);font-weight:700;
