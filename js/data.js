@@ -205,11 +205,12 @@ const PORTFOLIO_DATA = {
         desc: "Interfaces, flows and design systems — from low-fi wireframes to pixel-checked, production-ready screens.",
         mode: "link",
         projects: [
-          { title: "UI/UX Case Study 1", tag: "UI/UX · Behance", bio: "Live case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/251691937/", embed: "https://www.behance.net/embed/project/251691937?ilo0=1" },
-          { title: "UI/UX Case Study 2", tag: "UI/UX · Behance", bio: "Live case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/251696497/", embed: "https://www.behance.net/embed/project/251696497?ilo0=1" },
-          { title: "UI/UX Case Study 3", tag: "UI/UX · Behance", bio: "Live case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/248206611/", embed: "https://www.behance.net/embed/project/248206611?ilo0=1" },
-          { title: "UI/UX Case Study 4", tag: "UI/UX · Behance", bio: "Live case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/253627387/", embed: "https://www.behance.net/embed/project/253627387?ilo0=1" },
-          { title: "UI/UX Case Study 5", tag: "UI/UX · Behance", bio: "Live case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/251749097/", embed: "https://www.behance.net/embed/project/251749097?ilo0=1" }
+          { title: "Runway — Fashion App", tag: "UI/UX · Behance", bio: "Fashion app UX case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/251691937/Runway-Fashion-App-UX-Case-Study", embed: "https://www.behance.net/embed/project/251691937?ilo0=1" },
+          { title: "Bloom & Bliss — Plant E‑Commerce", tag: "UI/UX · Behance", bio: "Plant e-commerce UX/UI case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/251696497/Bloom-Bliss-Plant-E-Commerce-UXUI-Case-Study", embed: "https://www.behance.net/embed/project/251696497?ilo0=1" },
+          { title: "Cloud Raptor — Website Redesign", tag: "UI/UX · Behance", bio: "Website redesign case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/251712263/Cloud-Raptor-Website-Redesign-Case-Study", embed: "https://www.behance.net/embed/project/251712263?ilo0=1" },
+          { title: "Software Development Agency — Web UI/UX", tag: "UI/UX · Behance", bio: "Agency website UI/UX case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/251750253/Software-Development-Agency-Web-UIUX-Case-Study", embed: "https://www.behance.net/embed/project/251750253?ilo0=1" },
+          { title: "Montra — Personal Budgeting App", tag: "UI/UX · Behance", bio: "Budgeting app UI/UX case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/253627387/Montra-Personal-Budgeting-App-UIUX-Case-Study", embed: "https://www.behance.net/embed/project/253627387?ilo0=1" },
+          { title: "Education Website UI Design", tag: "UI/UX · Behance", bio: "Education website UI design case study — open on Behance for the full breakdown.", link: "https://www.behance.net/gallery/248206611/Education-Website-UI-Design-Case-Study", embed: "https://www.behance.net/embed/project/248206611?ilo0=1" }
         ]
       },
       {
