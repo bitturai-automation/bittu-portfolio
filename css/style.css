@@ -1,0 +1,1035 @@
+/* ==========================================================================
+   BITTU RAI — PORTFOLIO
+   An editorial, tools-of-the-trade design system for a designer who works
+   in both ink (brand/print) and code (product/UI). Palette borrows from
+   the marker-and-cutting-mat world of a working design studio rather than
+   a generic SaaS or agency template.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  /* ---- Studio palette -------------------------------------------------- */
+  --paper:      #F4F2EC;   /* warm studio paper */
+  --paper-dim:  #EAE7DD;
+  --ink:        #15151A;   /* near-black, cool undertone */
+  --ink-soft:   #57544C;   /* muted text on paper */
+  --ink-faint:  #9A968A;
+  --line:       #D9D5C8;   /* hairline rule */
+  --line-dark:  #35342E;
+
+  --flame:      #FF4B1F;   /* primary accent — marker orange */
+  --flame-deep: #C2340A;
+  --sky:        #2C5CFF;   /* secondary accent — used for product/UI lens */
+
+  --paper-rgb: 244,242,236;
+  --ink-rgb: 21,21,26;
+
+  /* ---- Type -------------------------------------------------------------*/
+  --f-display: "Bricolage Grotesque", "Inter", sans-serif;
+  --f-body:    "Inter", sans-serif;
+  --f-mono:    "JetBrains Mono", monospace;
+
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --ease-soft: cubic-bezier(.22,1,.36,1);
+
+  --container: 1320px;
+  --gutter: clamp(20px, 4vw, 56px);
+}
+
+body[data-role="product"]{
+  --flame: #2C5CFF;
+  --flame-deep: #1A3FCC;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:auto; }
+html.has-lenis{ scroll-behavior:auto; }
+
+/* ---- Scroll-scrubbed word reveal -----------------------------------------------------
+   Words are wrapped in .rv-word spans by initScrollTextReveal() in main.js;
+   their opacity/lift is driven entirely by an inline GSAP scrub tween, so
+   this class only needs to make them behave as expected inline. */
+.rv-word{ display:inline-block; will-change:transform,opacity; }
+
+/* ---- Scroll progress bar ------------------------------------------------*/
+#scroll-progress{
+  position:fixed; top:0; left:0; height:3px; width:100%;
+  background:linear-gradient(90deg, var(--flame), var(--sky));
+  transform:scaleX(0); transform-origin:0 50%;
+  z-index:9998; pointer-events:none;
+  will-change:transform;
+}
+@media (prefers-reduced-motion:reduce){ #scroll-progress{ display:none; } }
+
+/* ---- Lens-switch page transition -----------------------------------------------------
+   A full-screen curtain that covers the viewport while the Graphic/Product
+   content swaps underneath, then lifts away — reads like a real page
+   change even though it's all one document. Driven entirely from JS
+   (transform), so it starts fully off-screen and inert by default. */
+#lens-transition{
+  position:fixed; inset:0; z-index:9500;
+  background:var(--ink);
+  transform:translateY(101%);
+  display:flex; align-items:center; justify-content:center;
+  pointer-events:none;
+}
+#lens-transition-label{
+  font-family:var(--f-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--paper); opacity:0;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; margin:0; padding:0; }
+button{ font-family:inherit; background:none; border:none; cursor:pointer; color:inherit; }
+input{ font-family:inherit; }
+svg{ display:block; }
+
+::selection{ background:var(--ink); color:var(--paper); }
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 calc(var(--gutter) + env(safe-area-inset-right,0px)) 0 calc(var(--gutter) + env(safe-area-inset-left,0px));
+}
+
+/* ---- Typography scale --------------------------------------------------*/
+h1,h2,h3,h4{
+  font-family:var(--f-display);
+  font-weight:600;
+  line-height:1.02;
+  letter-spacing:-0.02em;
+  margin:0;
+}
+.display-1{ font-size:clamp(56px, 9vw, 148px); font-weight:700; letter-spacing:-0.03em; }
+.display-2{ font-size:clamp(38px, 5.6vw, 84px); font-weight:600; }
+.display-3{ font-size:clamp(28px, 3.4vw, 46px); font-weight:600; }
+
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:12.5px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.eyebrow::before{
+  content:"";
+  width:7px; height:7px;
+  border-radius:50%;
+  background:var(--flame);
+  flex:none;
+}
+
+.lede{
+  font-size:clamp(16px, 1.3vw, 19px);
+  color:var(--ink-soft);
+  max-width:52ch;
+  line-height:1.65;
+}
+
+.section{ padding:clamp(64px,9vw,108px) 0; position:relative; }
+.section-head{ max-width:760px; margin-bottom:44px; }
+.section-head .eyebrow{ margin-bottom:16px; }
+.section-tag{ font-family:var(--f-mono); font-size:13px; color:var(--ink-faint); }
+
+section[id]{ scroll-margin-top:88px; }
+
+.hairline{ border:none; border-top:1px solid var(--line); margin:0; }
+
+/* ---- Buttons -------------------------------------------------------------*/
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--f-body);
+  font-weight:600;
+  font-size:15px;
+  padding:16px 28px;
+  border:1px solid var(--ink);
+  border-radius:999px;
+  position:relative;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.btn svg{ width:16px; height:16px; transition:transform .35s var(--ease-out); }
+.btn-solid{ background:var(--ink); color:var(--paper); }
+.btn-solid:hover svg{ transform:translate(3px,-3px); }
+.btn-flame{ background:var(--flame); border-color:var(--flame); color:#fff; }
+.btn-flame:hover svg{ transform:translate(3px,-3px); }
+.btn-ghost{ background:transparent; color:var(--ink); }
+.btn-ghost:hover{ background:var(--ink); color:var(--paper); }
+
+/* ---- Cursor --------------------------------------------------------------*/
+.cursor-dot,.cursor-label,.cursor-ring{
+  position:fixed; top:0; left:0; z-index:9999;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  mix-blend-mode:difference;
+}
+.cursor-dot{
+  width:10px; height:10px;
+  border-radius:50%;
+  background:var(--paper);
+  transition:width .25s var(--ease-out), height .25s var(--ease-out), background .25s;
+}
+.cursor-dot.is-big{ width:84px; height:84px; }
+/* A slower-lagging outline that trails a beat behind the dot in normal
+   motion (set up in JS with a longer GSAP ease), reading as a soft halo.
+   It steps out of the way — rather than doubling up — the moment the dot
+   itself grows into the label bubble on hover. */
+.cursor-ring{
+  width:34px; height:34px;
+  border-radius:50%;
+  border:1px solid var(--paper);
+  opacity:.45;
+  transition:opacity .25s, border-color .3s;
+}
+.cursor-ring.is-big{ opacity:0; }
+.cursor-label{
+  font-family:var(--f-mono);
+  font-size:11px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--paper);
+  opacity:0;
+  transition:opacity .2s;
+  white-space:nowrap;
+}
+.cursor-label.is-on{ opacity:1; }
+body.cursor-ready, body.cursor-ready a, body.cursor-ready button{ cursor:none; }
+
+/* Small expanding ring spawned on click for tactile feedback. */
+.cursor-ripple{
+  position:fixed; top:0; left:0; z-index:9999; pointer-events:none;
+  width:16px; height:16px; margin:-8px 0 0 -8px;
+  border-radius:50%; border:1px solid var(--flame);
+  transform:scale(1); opacity:.9;
+  mix-blend-mode:difference;
+}
+@media(hover:none){
+  .cursor-dot,.cursor-label,.cursor-ring,.cursor-ripple{ display:none !important; }
+}
+
+/* ---- Loader ---------------------------------------------------------------*/
+#loader{
+  position:fixed; inset:0; z-index:10000;
+  background:var(--ink);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+#loader .loader-word{
+  font-family:var(--f-display);
+  font-weight:700;
+  font-size:clamp(32px,7vw,72px);
+  color:var(--paper);
+  overflow:hidden;
+}
+#loader .loader-word span{ display:inline-block; transform:translateY(110%); }
+
+/* ---- Nav -------------------------------------------------------------------*/
+#site-nav{
+  position:fixed; top:0; left:0; right:0; z-index:400;
+  padding:calc(26px + env(safe-area-inset-top,0px)) 0 26px;
+  transition:padding .4s var(--ease-soft), background .4s, box-shadow .4s;
+}
+#site-nav.is-scrolled{
+  padding:14px 0;
+  background:rgba(var(--paper-rgb),.86);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line);
+}
+.nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.logo{ display:flex; align-items:center; }
+.logo img{ height:34px; width:auto; display:block; }
+.nav-links{ display:flex; gap:34px; }
+.nav-links a{
+  font-size:14.5px; font-weight:500; position:relative; padding:4px 0;
+}
+.nav-links a::after{
+  content:""; position:absolute; left:0; right:100%; bottom:0; height:1px;
+  background:var(--ink); transition:right .35s var(--ease-out);
+}
+.nav-links a:hover::after,.nav-links a.is-active::after{ right:0; }
+.nav-actions{ display:flex; align-items:center; gap:18px; }
+
+/* Resume gets its own bordered pill in the nav rather than blending into
+   the plain text links — it's an action (open a document), not a section
+   jump, so it should read that way at a glance. */
+#nav-resume{
+  border:1px solid var(--line); border-radius:999px;
+  padding:6px 14px !important; font-family:var(--f-mono); font-size:11.5px;
+  text-transform:uppercase; letter-spacing:.03em;
+  transition:border-color .3s, background .3s, color .3s;
+}
+#nav-resume::after{ content:none; }
+#nav-resume:hover{ background:var(--ink); border-color:var(--ink); color:var(--paper); }
+
+/* A persistent, low-key "open to work" signal for recruiters who land
+   deep in the page via a shared link and might otherwise never see the
+   one in the hero. Hidden once things get tight so it never competes with
+   the lens toggle / burger for space. */
+.nav-avail{
+  display:flex; align-items:center; gap:7px;
+  font-family:var(--f-mono); font-size:11px; text-transform:uppercase; letter-spacing:.03em;
+  color:var(--ink-soft); white-space:nowrap;
+}
+@media(max-width:1180px){ .nav-avail{ display:none; } }
+
+/* ---- Hire-me floating action button ------------------------------------------------
+   Surfaces once the hero (with its own CTAs) has scrolled away, and steps
+   aside again once Contact itself is on screen — a quiet, always-reachable
+   path to get in touch without hunting for the footer. */
+.hire-fab{
+  position:fixed; right:22px; bottom:22px; z-index:600;
+  display:flex; align-items:center; gap:9px;
+  background:var(--ink); color:var(--paper); border:1px solid var(--ink);
+  padding:13px 20px; border-radius:999px;
+  font-family:var(--f-mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+  box-shadow:0 14px 30px -16px rgba(0,0,0,.4);
+  opacity:0; transform:translateY(16px) scale(.92); pointer-events:none;
+  transition:opacity .35s var(--ease-out), transform .35s var(--ease-out), background .3s, border-color .3s;
+}
+.hire-fab.is-visible{ opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+.hire-fab:hover{ background:var(--flame); border-color:var(--flame); }
+.hire-fab .hero-avail-dot{ background:#2FBF71; }
+@media(max-width:480px){
+  .hire-fab{ right:14px; bottom:14px; padding:11px 16px; font-size:11px; }
+}
+@media print{ .hire-fab{ display:none; } }
+
+.lens-toggle{
+  display:flex; border:1px solid var(--line-dark, var(--line)); border-radius:999px; padding:3px;
+  font-family:var(--f-mono); font-size:11.5px;
+}
+.lens-toggle button{ padding:7px 14px; border-radius:999px; color:var(--ink-soft); transition:background .3s,color .3s; }
+.lens-toggle button.is-on{ background:var(--ink); color:var(--paper); }
+
+.nav-burger{ display:none; width:40px; height:40px; align-items:center; justify-content:center; }
+
+/* ---- Mobile fullscreen menu -----------------------------------------------*/
+#mobile-menu{
+  position:fixed; inset:0; z-index:500;
+  background:var(--ink); color:var(--paper);
+  clip-path:circle(0% at calc(100% - 32px) 32px);
+  transition:clip-path .6s var(--ease-soft);
+  display:flex; flex-direction:column; justify-content:center;
+  padding:90px 32px 40px;
+  overflow-y:auto;
+}
+#mobile-menu.is-open{ clip-path:circle(150% at calc(100% - 32px) 32px); }
+#mobile-menu a{
+  font-family:var(--f-display); font-weight:600;
+  font-size:clamp(32px,10vw,52px);
+  display:block; padding:10px 0;
+  opacity:0; transform:translateY(24px);
+}
+#mobile-menu.is-open a{ animation:menuIn .6s var(--ease-out) forwards; }
+#mobile-menu.is-open a:nth-child(1){ animation-delay:.08s; }
+#mobile-menu.is-open a:nth-child(2){ animation-delay:.14s; }
+#mobile-menu.is-open a:nth-child(3){ animation-delay:.2s; }
+#mobile-menu.is-open a:nth-child(4){ animation-delay:.26s; }
+#mobile-menu.is-open a:nth-child(5){ animation-delay:.32s; }
+@keyframes menuIn{ to{ opacity:1; transform:translateY(0); } }
+.mobile-menu-close{ position:absolute; top:24px; right:24px; color:var(--paper); width:44px; height:44px; }
+.lens-toggle-mobile{ border-color:#4A493F; margin-top:28px; font-size:13px; width:max-content; }
+.lens-toggle-mobile button{ color:#B8B5AC; padding:9px 18px; }
+.lens-toggle-mobile button.is-on{ background:var(--paper); color:var(--ink); }
+
+/* ---- Hero ------------------------------------------------------------------
+   "Studio card" concept: oversized display type on the left paired with a
+   bordered index-card panel on the right that carries a rotating stamp
+   seal and the focus-areas list — reads like a printed studio dossier
+   rather than a generic centred hero. A faint oversized watermark word +
+   hairline grid sit behind everything for depth. Every .hero-anim element
+   starts hidden and is revealed by the heroIntro() GSAP timeline in
+   main.js (falls back to a plain visible state if GSAP/motion is off).
+   ------------------------------------------------------------------------ */
+#hero{ padding:clamp(120px,15vw,168px) 0 0; position:relative; overflow:hidden; }
+
+.hero-bg{ position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.hero-bg-word{
+  position:absolute; top:52%; left:50%; transform:translate(-50%,-50%);
+  font-family:var(--f-display); font-weight:800; text-transform:uppercase;
+  font-size:clamp(120px,22vw,320px); line-height:1; letter-spacing:-0.02em;
+  color:transparent; -webkit-text-stroke:1px var(--line);
+  white-space:nowrap; user-select:none;
+}
+.hero-bg-grid{
+  position:absolute; inset:0;
+  background-image:linear-gradient(to right, var(--line) 1px, transparent 1px);
+  background-size:clamp(80px,10vw,140px) 100%;
+  opacity:.4; mask-image:linear-gradient(to bottom, black, transparent 92%);
+}
+/* Soft drifting colour blobs for ambient motion behind the hero type —
+   pure CSS, cheap to run, disabled entirely under reduced motion. */
+.hero-blob{
+  position:absolute; border-radius:50%; filter:blur(60px);
+  opacity:.35; mix-blend-mode:multiply; will-change:transform;
+}
+.hero-blob-a{
+  width:clamp(220px,30vw,420px); height:clamp(220px,30vw,420px);
+  top:-8%; right:6%; background:var(--flame);
+  animation:blobFloatA 18s ease-in-out infinite;
+}
+.hero-blob-b{
+  width:clamp(180px,24vw,340px); height:clamp(180px,24vw,340px);
+  bottom:-12%; left:2%; background:var(--sky);
+  animation:blobFloatB 22s ease-in-out infinite;
+}
+@keyframes blobFloatA{
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(-4%,6%) scale(1.12); }
+}
+@keyframes blobFloatB{
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(5%,-5%) scale(1.08); }
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-blob{ animation:none !important; }
+}
+@media (max-width:640px){
+  .hero-blob{ opacity:.22; }
+}
+
+.hero-meta-bar{
+  position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+  gap:12px 20px;
+  padding-bottom:18px; margin-bottom:clamp(18px,3vw,34px);
+  border-bottom:1px solid var(--line);
+}
+.hero-eyebrow{ margin:0; }
+.hero-avail{ display:flex; align-items:center; gap:8px; font-family:var(--f-mono); font-size:12px; color:var(--ink-soft); }
+.hero-avail-dot{ width:7px; height:7px; border-radius:50%; background:#2FBF71; box-shadow:0 0 0 3px rgba(47,191,113,.2); flex:none; animation:pulseDot 2.4s ease-in-out infinite; }
+@keyframes pulseDot{ 0%,100%{ box-shadow:0 0 0 3px rgba(47,191,113,.2);} 50%{ box-shadow:0 0 0 6px rgba(47,191,113,.12);} }
+
+.hero-main{
+  position:relative; z-index:1;
+  display:grid; grid-template-columns:1.5fr minmax(260px,.85fr);
+  gap:clamp(30px,5vw,64px);
+  align-items:start;
+}
+
+.hero-title{
+  overflow:hidden; margin:0 0 0 -3px;
+  font-family:var(--f-display); font-weight:700;
+  font-size:clamp(46px, 8.4vw, 132px);
+  line-height:0.94; letter-spacing:-0.035em;
+}
+.hero-title .line{ display:block; overflow:hidden; }
+.hero-title .line span{ display:block; transform:translateY(115%); will-change:transform; }
+/* The role word (3rd line) is typed/deleted letter-by-letter and can wrap to
+   a 2nd line depending on which word is showing (e.g. "Brand Identity
+   Designer"). Reserve room for 2 lines permanently on just this line so the
+   hero's total height never changes mid-animation and nothing below it
+   shifts on the page. */
+.hero-title .line:last-child{ min-height:1.88em; }
+.hero-role-word{ color:var(--flame); position:relative; }
+
+.hero-lede{ margin:26px 0 0; max-width:46ch; }
+.hero-ctas{ display:flex; flex-wrap:wrap; gap:14px; margin-top:30px; }
+
+/* ---- Hero card: bordered dossier panel with a rotating stamp seal ---- */
+.hero-card{
+  position:relative;
+  border:1px solid var(--line); border-radius:18px;
+  padding:26px 24px 8px;
+  background:rgba(var(--paper-rgb),.5);
+  backdrop-filter:blur(2px);
+  transform-style:preserve-3d; will-change:transform;
+  transition:transform .35s var(--ease-out);
+}
+.hero-card-seal{
+  position:absolute; top:-34px; right:-14px; width:100px; height:100px;
+  display:flex; align-items:center; justify-content:center;
+}
+.hero-seal-svg{
+  position:absolute; inset:0; width:100%; height:100%;
+  fill:var(--ink-soft); text-transform:uppercase;
+  animation:sealSpin 16s linear infinite;
+}
+.hero-seal-svg text{ fill:var(--ink-soft); }
+@keyframes sealSpin{ to{ transform:rotate(360deg); } }
+.hero-seal-center{
+  width:40px; height:40px; border-radius:50%;
+  background:var(--flame); color:var(--paper);
+  display:flex; align-items:center; justify-content:center; flex:none;
+  box-shadow:0 6px 18px -6px rgba(0,0,0,.35);
+}
+.hero-seal-center svg{ width:16px; height:16px; }
+
+.hero-card-head{
+  display:flex; align-items:baseline; justify-content:space-between;
+  padding-bottom:14px; margin-bottom:4px; border-bottom:1px solid var(--line);
+}
+.hero-card-label{ font-family:var(--f-mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); }
+.hero-card-index{ font-family:var(--f-mono); font-size:11.5px; color:var(--flame); }
+
+.hero-facts{ display:flex; flex-direction:column; }
+.hero-facts li{
+  display:flex; align-items:baseline; gap:14px;
+  padding:13px 0; border-bottom:1px solid var(--line);
+  font-family:var(--f-mono); font-size:12.5px; color:var(--ink-soft);
+  transition:padding-left .35s var(--ease-out);
+}
+.hero-facts li:last-child{ border-bottom:none; }
+.hero-facts li:hover{ padding-left:6px; }
+.hero-facts .fact-num{ color:var(--flame); flex:none; width:20px; }
+.hero-facts .fact-label{ color:var(--ink); font-weight:500; letter-spacing:0; text-transform:none; font-family:var(--f-body); font-size:14px; }
+
+.hero-foot{
+  position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+  margin-top:clamp(32px,5vw,56px);
+  padding:18px 0; border-top:1px solid var(--line);
+}
+.scroll-hint{ display:flex; align-items:center; gap:10px; font-family:var(--f-mono); font-size:12px; color:var(--ink-soft); }
+.scroll-hint .line-anim{ width:1px; height:28px; background:var(--ink-faint); position:relative; overflow:hidden; }
+.scroll-hint .line-anim::after{
+  content:""; position:absolute; left:0; top:-100%; width:100%; height:100%; background:var(--ink);
+  animation:scrollLine 1.8s ease-in-out infinite;
+}
+@keyframes scrollLine{ 0%{top:-100%;} 60%{top:100%;} 100%{top:100%;} }
+
+.hero-next{ display:flex; align-items:center; gap:12px; font-family:var(--f-mono); font-size:12.5px; letter-spacing:.03em; }
+.hero-next-num{ color:var(--flame); }
+.hero-next-label{ text-transform:uppercase; }
+.hero-next svg{ width:15px; height:15px; transition:transform .35s var(--ease-out); }
+.hero-next:hover svg{ transform:translateY(4px); }
+
+/* Reveal-on-load state for hero elements (overridden inline by GSAP, or by
+   the reduced-motion / no-JS rules below). */
+.hero-anim{ opacity:0; transform:translateY(22px); }
+.hero-meta-bar.hero-anim{ transform:translateY(-14px); }
+
+@media (prefers-reduced-motion:reduce){
+  .hero-avail-dot,.hero-seal-svg{ animation:none !important; }
+}
+
+/* ---- Hero responsive ------------------------------------------------- */
+@media (max-width:900px){
+  .hero-main{ grid-template-columns:1fr; }
+  .hero-card{ margin-top:8px; }
+  .hero-card-seal{ top:-30px; right:16px; width:84px; height:84px; }
+}
+@media (max-width:640px){
+  #hero{ padding-top:112px; }
+  .hero-bg-word{ font-size:clamp(90px,32vw,160px); }
+  .hero-meta-bar{ flex-direction:column; align-items:flex-start; gap:10px; }
+  .hero-title{ font-size:clamp(40px,13vw,58px); letter-spacing:-0.02em; }
+  .hero-lede{ margin-top:20px; }
+  .hero-card{ border-radius:14px; padding:22px 18px 6px; }
+  .hero-card-seal{ width:70px; height:70px; top:-24px; right:12px; }
+  .hero-seal-center{ width:32px; height:32px; }
+  .hero-seal-center svg{ width:13px; height:13px; }
+  .hero-foot{ flex-direction:column; align-items:flex-start; gap:14px; }
+}
+
+/* ---- Marquee -----------------------------------------------------------------
+   Sits flush under the hero's closing rule so the hero → work journey reads
+   as one continuous strip rather than a hard cut. */
+.marquee-section{ padding:34px 0 40px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); overflow:hidden; }
+.marquee-label{ font-family:var(--f-mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:20px; }
+.marquee-row{ display:flex; white-space:nowrap; width:max-content; }
+.marquee-row span{
+  font-family:var(--f-mono); font-size:14px; padding:0 30px; color:var(--ink-soft);
+  display:flex; align-items:center; gap:12px;
+}
+.marquee-row span img{ height:20px; width:auto; filter:grayscale(1); opacity:.75; }
+.marquee-row.rev{ margin-top:18px; }
+
+/* ---- About ---------------------------------------------------------------------*/
+.about-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:44px; }
+.about-statement{ font-size:clamp(30px,4vw,54px); font-family:var(--f-display); font-weight:600; letter-spacing:-0.02em; line-height:1.08; }
+.about-copy{ margin-top:28px; }
+.stat-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--line); }
+.stat-row{ display:flex; justify-content:space-between; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); }
+.stat-num{ font-family:var(--f-mono); font-size:clamp(30px,3vw,44px); font-variant-numeric:tabular-nums; }
+.stat-label{ font-size:13.5px; color:var(--ink-soft); max-width:16ch; text-align:right; }
+
+/* ---- Skills cloud -----------------------------------------------------------*/
+.skills-cloud{ display:flex; flex-wrap:wrap; gap:12px; }
+.skill-chip{
+  font-family:var(--f-mono); font-size:14px; padding:11px 18px;
+  border:1px solid var(--line); border-radius:999px; color:var(--ink-soft);
+  transition:background .3s,color .3s,border-color .3s;
+}
+.skill-chip:hover{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
+
+/* ---- Process -----------------------------------------------------------------
+   A 3-up grid of dossier cards rather than a plain stacked list: each step
+   gets an oversized outlined index number that fills in with the flame
+   accent on hover, so the "process" reads as distinct, numbered stations
+   rather than rows of text. */
+.process-list{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--line);
+  border:1px solid var(--line);
+}
+.process-card{
+  position:relative; background:var(--paper);
+  padding:34px 28px 30px;
+  transition:background .4s var(--ease-out), transform .4s var(--ease-out);
+}
+.process-card::after{
+  content:""; position:absolute; left:28px; right:28px; bottom:0; height:2px;
+  background:var(--flame); transform:scaleX(0); transform-origin:left;
+  transition:transform .5s var(--ease-out);
+}
+@media(hover:hover){
+  .process-card:hover{ background:rgba(0,0,0,.025); transform:translateY(-4px); }
+  .process-card:hover::after{ transform:scaleX(1); }
+  .skill-chip:hover{ transform:translateY(-2px); }
+}
+.process-card-num{
+  display:block; font-family:var(--f-mono); font-weight:600; font-size:42px;
+  line-height:1; letter-spacing:-0.01em; margin-bottom:20px;
+  color:transparent; -webkit-text-stroke:1.4px var(--ink-faint);
+  transition:color .4s var(--ease-out), -webkit-text-stroke-color .4s var(--ease-out);
+}
+.process-card:hover .process-card-num{ color:var(--flame); -webkit-text-stroke-color:var(--flame); }
+.process-card h4{ font-size:18.5px; font-weight:600; margin-bottom:10px; transition:color .35s; }
+.process-card:hover h4{ color:var(--flame); }
+.process-card p{ color:var(--ink-soft); font-size:14px; line-height:1.6; max-width:34ch; margin:0; }
+@media (prefers-reduced-motion:reduce){
+  .process-card,.process-card::after,.process-card-num,.process-card h4{ transition:none !important; }
+}
+@media(max-width:980px){
+  .process-list{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:640px){
+  .process-list{ grid-template-columns:1fr; }
+  .process-card{ padding:28px 24px 26px; }
+}
+
+/* ---- Services ------------------------------------------------------------------
+   Desktop: title + description sit inline and the description fades/slides in
+   on hover (a mouse-only gesture). Mobile has no hover, so below 860px each
+   row becomes a tap-to-expand accordion instead — same content, an
+   equivalent animated interaction, nothing left invisible. */
+.services-list{ border-top:1px solid var(--line); }
+.service-row{
+  display:grid;
+  grid-template-columns:32px 1fr 26px;
+  grid-template-areas:"num title arrow" "desc desc desc";
+  align-items:center; column-gap:16px;
+  padding:26px 0; border-bottom:1px solid var(--line);
+  cursor:pointer; position:relative;
+}
+.service-num{ grid-area:num; font-family:var(--f-mono); font-size:14px; color:var(--ink-faint); }
+.service-title{ grid-area:title; font-family:var(--f-display); font-size:clamp(22px,6vw,40px); font-weight:600; transition:transform .4s var(--ease-out), color .4s; }
+.service-desc{
+  grid-area:desc; grid-column:1/-1; overflow:hidden;
+  max-height:0; opacity:0; color:var(--ink-soft); font-size:14px; line-height:1.6;
+  transition:max-height .45s var(--ease-out), opacity .35s, margin-top .45s var(--ease-out);
+}
+.service-row.is-open .service-desc{ max-height:220px; opacity:1; margin-top:14px; }
+.service-arrow{ grid-area:arrow; width:24px; height:24px; transition:transform .4s var(--ease-out); }
+.service-row.is-open .service-arrow{ transform:rotate(45deg); }
+@media(min-width:860px){
+  .service-row{
+    display:flex; align-items:center; gap:28px;
+    padding:30px 0;
+  }
+  .service-num{ width:40px; flex:none; }
+  .service-title{ flex:1; }
+  .service-desc{ max-width:34ch; max-height:none; opacity:0; transform:translateX(-10px); margin-top:0 !important; transition:opacity .4s, transform .4s; flex:none; }
+  .service-arrow{ flex:none; transform:rotate(-45deg); }
+  .service-row.is-open .service-arrow{ transform:rotate(-45deg); }
+  .service-row:hover .service-title{ transform:translateX(14px); color:var(--flame); }
+  .service-row:hover .service-arrow{ transform:rotate(0deg); }
+  .service-row:hover .service-desc{ opacity:1; transform:translateX(0); }
+}
+
+/* ---- Brand marquee (big cards) ----------------------------------------------------
+   Two rows of oversized, boxed logo cards drifting in opposite directions —
+   same continuous motion as the tools strip up top, but each logo now gets
+   real weight and a card of its own instead of floating bare in a line. */
+.brand-marquee-wrap{ overflow:hidden; padding:6px 0 10px; }
+.brand-marquee-row{ display:flex; width:max-content; gap:16px; }
+.brand-marquee-row + .brand-marquee-row{ margin-top:16px; }
+.brand-card{
+  flex:none; display:flex; align-items:center; justify-content:center;
+  background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:22px 40px; min-width:180px; height:100px; box-sizing:border-box;
+  transition:border-color .35s, transform .35s var(--ease-out), box-shadow .35s;
+}
+.brand-card img{
+  max-width:140px; max-height:52px; width:auto; height:auto;
+  filter:grayscale(1); opacity:.68;
+  transition:filter .35s, opacity .35s, transform .4s var(--ease-out);
+}
+@media(hover:hover){
+  .brand-card:hover{ border-color:var(--flame); transform:translateY(-5px); box-shadow:0 16px 28px -16px rgba(0,0,0,.18); }
+  .brand-card:hover img{ filter:grayscale(0); opacity:1; transform:scale(1.06); }
+}
+@media(max-width:768px){
+  .brand-card{ min-width:150px; height:84px; padding:16px 28px; }
+  .brand-card img{ max-height:42px; max-width:110px; }
+}
+@media(max-width:480px){
+  .brand-card{ min-width:130px; height:72px; padding:12px 22px; border-radius:10px; }
+  .brand-card img{ max-height:34px; max-width:90px; }
+  .brand-marquee-row{ gap:10px; }
+  .brand-marquee-row + .brand-marquee-row{ margin-top:10px; }
+}
+
+/* ---- Work / Projects -------------------------------------------------------------*/
+.work-filters{ display:flex; flex-wrap:wrap; gap:10px 10px; row-gap:12px; margin-bottom:34px; }
+.work-filter{
+  font-family:var(--f-mono); font-size:12.5px; letter-spacing:.02em;
+  padding:10px 18px; border:1px solid var(--line); border-radius:999px;
+  white-space:nowrap; color:var(--ink-soft); flex:none;
+  transition:background .3s,color .3s,border-color .3s;
+}
+@media (max-width:520px){
+  .work-filter{ font-size:11.5px; padding:8px 14px; }
+}
+.work-filter.is-on{ background:var(--ink); border-color:var(--ink); color:var(--paper); }
+
+.work-category-desc{ color:var(--ink-soft); max-width:60ch; margin-bottom:36px; font-size:14.5px; }
+
+.project-row{
+  display:grid; grid-template-columns:64px 1fr 1fr; gap:32px;
+  align-items:center;
+  padding:34px 0; border-bottom:1px solid var(--line);
+  cursor:pointer;
+}
+.project-row:first-child{ border-top:1px solid var(--line); }
+.project-index{ font-family:var(--f-mono); font-size:13px; color:var(--ink-faint); }
+.project-info h3{ font-size:clamp(20px,2.2vw,30px); font-weight:600; margin-bottom:8px; }
+.project-tag{ font-family:var(--f-mono); font-size:11.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.04em; }
+.project-thumb{ position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--paper-dim); }
+.project-thumb img,.project-thumb video{ width:100%; height:100%; object-fit:contain; transform:scale(1); transition:transform .8s var(--ease-out); }
+.project-row:hover .project-thumb img,.project-row:hover .project-thumb video{ transform:scale(1.035); }
+.project-link-ico{ width:20px; height:20px; transform:rotate(-45deg); transition:transform .3s var(--ease-out); flex:none; margin-left:auto; }
+.project-row:hover .project-link-ico{ transform:rotate(0); }
+
+.grid-mode{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line); }
+.grid-tile{ position:relative; aspect-ratio:4/5; overflow:hidden; background:var(--paper-dim); cursor:pointer; }
+.grid-tile img{ width:100%; height:100%; object-fit:contain; transition:transform .6s var(--ease-out); }
+@media(hover:hover){
+  .grid-tile:hover img{ transform:scale(1.05) rotate(-.6deg); }
+}
+.grid-tile-cap{
+  position:absolute; left:0; right:0; bottom:0; padding:10px 12px;
+  font-family:var(--f-mono); font-size:11px; color:#fff;
+  background:linear-gradient(0deg, rgba(0,0,0,.65), transparent);
+  opacity:0; transition:opacity .3s;
+}
+.grid-tile:hover .grid-tile-cap{ opacity:1; }
+
+/* ---- Case study modal -------------------------------------------------------------*/
+#case-modal,#photo-modal{
+  position:fixed; inset:0; z-index:800;
+  background:rgba(var(--ink-rgb),.6);
+  backdrop-filter:blur(6px);
+  display:flex; align-items:flex-start; justify-content:center;
+  padding:5vh 20px; overflow-y:auto;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+  opacity:0; pointer-events:none; transition:opacity .35s;
+}
+#case-modal.is-open,#photo-modal.is-open{ opacity:1; pointer-events:auto; }
+#case-modal{ align-items:center; padding:4vh 20px; }
+.modal-card{
+  background:var(--paper); max-width:1180px; width:100%; padding:0;
+  position:relative; transform:translateY(30px); transition:transform .4s var(--ease-out);
+  max-height:92vh; overflow:hidden;
+}
+#case-modal.is-open .modal-card{ transform:translateY(0); }
+.modal-close{ position:absolute; top:20px; right:20px; width:40px; height:40px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; z-index:5; background:var(--paper); }
+.modal-body{ display:grid; grid-template-columns:1fr 1fr; height:92vh; max-height:92vh; }
+.modal-hero{ width:100%; height:100%; overflow:hidden; margin-bottom:0; background:var(--paper-dim); }
+.modal-hero img{ width:100%; height:100%; object-fit:cover; }
+.modal-content{ padding:clamp(28px,3.6vw,56px); overflow-y:auto; -webkit-overflow-scrolling:touch; }
+.modal-meta{ display:flex; gap:32px; margin:22px 0; flex-wrap:wrap; }
+.modal-meta div{ font-size:13px; }
+.modal-meta b{ display:block; font-family:var(--f-mono); font-size:11px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; }
+.modal-gallery{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:26px; }
+.modal-gallery img{ width:100%; aspect-ratio:4/3; object-fit:contain; background:var(--paper-dim); }
+
+@media(max-width:860px){
+  #case-modal{ align-items:flex-start; padding:5vh 20px; }
+  .modal-card{ max-height:none; }
+  .modal-body{ grid-template-columns:1fr; height:auto; max-height:none; }
+  .modal-hero{ aspect-ratio:16/9; height:auto; }
+  .modal-content{ overflow-y:visible; padding:clamp(24px,4vw,40px); }
+}
+
+#photo-modal .modal-hero{ background:var(--ink); }
+#photo-modal .modal-hero img{ object-fit:contain; }
+
+/* ---- Experience / Education timeline -----------------------------------------------
+   A slim rail runs down the left of each list with a dot marking every
+   entry; an accent-coloured overlay on that rail draws itself in sync with
+   scroll (see initTimelineRails in main.js) instead of just sitting there
+   static, tying this section into the same scroll-storytelling language as
+   the rest of the page. Layout uses the "absolutely-positioned children
+   ignore the parent's own padding" trick, so the period label + dot can
+   live in a fixed-width rail while the actual copy just flows normally
+   after `padding-left` — no grid/markup changes needed. */
+.exp-grid{ display:grid; grid-template-columns:1fr 1.4fr; gap:44px; }
+.timeline{ position:relative; }
+.timeline::before{ content:""; position:absolute; top:0; bottom:0; left:104px; width:1px; background:var(--line); }
+.timeline-rail-fill{
+  position:absolute; top:0; left:104px; width:1px; height:100%;
+  background:var(--flame); transform:scaleY(0); transform-origin:top;
+  pointer-events:none; will-change:transform;
+}
+.timeline-item{
+  position:relative; padding:26px 0 26px 132px; border-bottom:1px solid var(--line);
+  transition:background .3s var(--ease-out);
+}
+.timeline-item::before{
+  content:""; position:absolute; left:100px; top:33px; width:9px; height:9px; border-radius:50%;
+  background:var(--paper); border:2px solid var(--ink-faint); z-index:2;
+  transition:background .3s, border-color .3s, transform .3s var(--ease-out);
+}
+.timeline-period{ position:absolute; left:0; top:29px; width:88px; font-family:var(--f-mono); font-size:11.5px; color:var(--ink-faint); }
+.timeline-item h4{ font-size:17px; font-weight:600; margin-bottom:4px; }
+.timeline-company{ font-size:13.5px; color:var(--ink-soft); margin-bottom:10px; }
+.timeline-item ul{ margin-top:8px; }
+.timeline-item li{ font-size:13.5px; color:var(--ink-soft); padding-left:14px; position:relative; margin-bottom:5px; }
+.timeline-item li::before{ content:"–"; position:absolute; left:0; }
+@media(hover:hover){
+  .timeline-item:hover{ background:rgba(0,0,0,.025); }
+  .timeline-item:hover::before{ background:var(--flame); border-color:var(--flame); transform:scale(1.35); }
+  .timeline-item:hover > div:last-child{ transform:translateX(3px); }
+  .timeline-item > div:last-child{ transition:transform .3s var(--ease-out); }
+}
+/* The currently-ongoing role/course gets a small live pulse instead of a
+   plain dot, so the eye lands on "this is happening now" first. */
+.timeline-item.is-current .timeline-period{ color:var(--flame); font-weight:600; }
+.timeline-item.is-current::before{ background:var(--flame); border-color:var(--flame); }
+.timeline-item.is-current::after{
+  content:""; position:absolute; left:96px; top:29px; width:17px; height:17px; border-radius:50%;
+  border:1px solid var(--flame); opacity:.6; animation:timelinePulse 2s ease-out infinite;
+}
+@keyframes timelinePulse{
+  0%{ transform:scale(.55); opacity:.65; }
+  100%{ transform:scale(1.7); opacity:0; }
+}
+@media (prefers-reduced-motion:reduce){
+  .timeline-rail-fill{ transform:scaleY(1) !important; }
+  .timeline-item.is-current::after{ animation:none; display:none; }
+}
+@media(max-width:480px){
+  .timeline-item{ padding-left:96px; }
+  .timeline-period{ width:64px; font-size:10.5px; }
+  .timeline::before,.timeline-rail-fill{ left:76px; }
+  .timeline-item::before{ left:72px; }
+  .timeline-item.is-current::after{ left:68px; }
+}
+
+/* ---- Testimonials -----------------------------------------------------------------
+   Auto-scrolling marquee (same drift technique as the tools/brands strips)
+   instead of a manual drag-scroller — it moves on its own and simply pauses
+   the moment a pointer lands on it (or a finger touches it) so the quote
+   can actually be read. */
+.testi-track{ display:flex; gap:2px; width:max-content; }
+.testi-card{
+  flex:0 0 min(420px,84vw); background:var(--ink); color:var(--paper);
+  padding:36px; display:flex; flex-direction:column; justify-content:space-between; min-height:280px;
+}
+.testi-quote{
+  font-family:var(--f-display); font-size:19px; line-height:1.4; font-weight:400;
+  opacity:.82; transition:opacity .35s, color .35s;
+}
+.testi-name{ margin-top:24px; font-size:13.5px; font-weight:600; }
+.testi-role{ font-size:12px; color:#B8B5AC; transition:color .35s; }
+@media(hover:hover){
+  .testi-card{ transition:background .35s; }
+  .testi-card:hover{ background:#000; }
+  .testi-card:hover .testi-quote{ opacity:1; }
+  .testi-card:hover .testi-role{ color:#D8D5C9; }
+}
+
+/* ---- FAQ ------------------------------------------------------------------------*/
+.faq-list{ border-top:1px solid var(--line); }
+.faq-item{ border-bottom:1px solid var(--line); }
+.faq-q{ display:flex; justify-content:space-between; align-items:center; padding:26px 0; width:100%; text-align:left; font-family:var(--f-display); font-size:clamp(17px,1.8vw,21px); font-weight:600; }
+.faq-plus{ width:18px; height:18px; flex:none; position:relative; }
+.faq-plus::before,.faq-plus::after{ content:""; position:absolute; background:var(--ink); }
+.faq-plus::before{ width:100%; height:1.5px; top:50%; left:0; transform:translateY(-50%); }
+.faq-plus::after{ height:100%; width:1.5px; left:50%; top:0; transform:translateX(-50%); transition:transform .3s; }
+.faq-item.is-open .faq-plus::after{ transform:translateX(-50%) rotate(90deg); opacity:0; }
+.faq-a{ max-height:0; overflow:hidden; transition:max-height .4s var(--ease-soft); }
+.faq-a p{ color:var(--ink-soft); font-size:14.5px; padding-bottom:26px; max-width:64ch; margin:0; }
+
+/* ---- Contact -----------------------------------------------------------------------*/
+#contact{ background:var(--ink); color:var(--paper); border-radius:0; }
+#contact .eyebrow{ color:#C9C6BC; }
+#contact .eyebrow::before{ background:var(--flame); }
+.contact-title{ font-size:clamp(40px,7vw,110px); font-family:var(--f-display); font-weight:700; letter-spacing:-0.02em; }
+.contact-row{ display:flex; flex-wrap:wrap; gap:16px; margin:34px 0 20px; }
+.contact-note{
+  display:flex; align-items:center; gap:9px;
+  font-size:13px; color:#C9C6BC; margin-bottom:36px;
+}
+.contact-note .hero-avail-dot{ background:#2FBF71; }
+#contact .btn-solid{ background:var(--paper); color:var(--ink); border-color:var(--paper); }
+#contact .btn-ghost{ border-color:#4A493F; color:var(--paper); }
+#contact .btn-ghost:hover{ background:var(--paper); color:var(--ink); }
+.contact-links{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; border-top:1px solid #34332B; padding-top:32px; }
+.contact-links div b{ display:block; font-family:var(--f-mono); font-size:11px; text-transform:uppercase; color:#8B887D; margin-bottom:8px; }
+.contact-links div a,.contact-links div span{ font-size:15px; }
+.social-row{ display:flex; gap:16px; margin-top:34px; }
+.social-row a{ width:42px; height:42px; border:1px solid #4A493F; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background .3s,border-color .3s; }
+.social-row a:hover{ background:var(--paper); border-color:var(--paper); color:var(--ink); }
+
+/* ---- Footer -----------------------------------------------------------------------*/
+footer{ background:var(--ink); color:var(--paper); padding:36px 0; }
+.footer-inner{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:13px; color:#9E9B90; }
+.footer-inner b{ color:var(--paper); }
+#to-top{ display:flex; align-items:center; gap:8px; color:var(--paper); }
+
+/* ---- Hover-to-highlight text --------------------------------------------------------
+   A handful of sections carry secondary copy in the softer --ink-soft tone.
+   On a pointer device, hovering the card/row now snaps that text to full
+   contrast (and nudges it slightly), so detail visibly "comes forward"
+   under the cursor. Text is never hidden outright — it stays fully legible
+   and accessible by default; this only affects visual emphasis. */
+@media(hover:hover){
+  .process-card p{ transition:color .35s, transform .35s; }
+  .process-card:hover p{ color:var(--ink); }
+
+  .timeline-item .timeline-company,
+  .timeline-item li{ transition:color .35s; }
+  .timeline-item:hover .timeline-company,
+  .timeline-item:hover li{ color:var(--ink); }
+  .timeline-item:hover li::before{ color:var(--flame); }
+
+  .project-info p{ transition:color .35s; }
+  .project-row:hover .project-info p{ color:var(--ink); }
+
+  .stat-label{ transition:color .35s; }
+  .stat-row:hover .stat-label{ color:var(--ink); }
+
+  .faq-a p{ transition:color .35s; }
+  .faq-item:hover .faq-a p{ color:var(--ink); }
+
+  .skill-chip{ transition:color .3s, background .3s, border-color .3s, transform .3s; }
+}
+@media (prefers-reduced-motion:reduce){
+  .process-card p,.timeline-item .timeline-company,.timeline-item li,
+  .project-info p,.stat-label,.faq-a p{ transition:none !important; }
+}
+   --rd is an optional per-item stagger delay (set inline by JS on rendered
+   list items) so groups of cards/rows fade in as a cascade rather than all
+   at once when a section scrolls into view. */
+.reveal{ opacity:0; transform:translateY(28px) scale(.985); transition-delay:var(--rd,0s); }
+.reveal.is-in{
+  opacity:1; transform:translateY(0) scale(1);
+  transition:opacity .8s var(--ease-out), transform .8s var(--ease-out);
+  transition-delay:var(--rd,0s);
+}
+
+/* Image / media wipe-reveal — used on project thumbnails and grid tiles so
+   artwork uncovers itself as it scrolls into view instead of just fading. */
+.reveal-img{
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path 1s var(--ease-out);
+  transition-delay:var(--rd,0s);
+}
+.reveal-img.is-in{ clip-path:inset(0 0 0% 0); }
+@media (prefers-reduced-motion:reduce){
+  .reveal-img{ clip-path:none !important; transition:none !important; }
+}
+
+/* Generic tap/click feedback so touch devices get the same "alive" feel
+   that :hover gives desktop pointers. */
+.btn,.skill-chip,.work-filter,.grid-tile,.social-row a,.faq-q,.service-row{
+  touch-action:manipulation;
+  transition:transform .25s var(--ease-out), background .3s, color .3s, border-color .3s;
+}
+.btn:active,.skill-chip:active,.work-filter:active,.grid-tile:active,.social-row a:active{ transform:scale(.96); }
+
+/* ---- Reduced motion ------------------------------------------------------------------*/
+@media (prefers-reduced-motion:reduce){
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  .reveal,.hero-anim{ opacity:1; transform:none; }
+  .hero-title .line span{ transform:none; }
+  .cursor-dot,.cursor-label,.cursor-ring,.cursor-ripple{ display:none; }
+}
+
+/* No-JS / GSAP-load-failure safety net: never leave hero content invisible. */
+html:not(.js-anim-ready) .hero-anim,
+html:not(.js-anim-ready) .hero-title .line span{
+  opacity:1 !important; transform:none !important;
+}
+
+/* ---- Responsive ---------------------------------------------------------------------*/
+/* Tighten up the mid-size laptop/tablet range before things get cramped
+   enough to need the mobile nav. */
+@media(max-width:1180px){
+  .nav-links{ gap:22px; }
+  .hero-main{ gap:clamp(24px,4vw,40px); }
+}
+@media(max-width:980px){
+  .nav-links{ display:none; }
+  .nav-burger{ display:flex; }
+  .about-grid,.exp-grid{ grid-template-columns:1fr; }
+  .contact-links{ grid-template-columns:1fr 1fr; }
+  .grid-mode{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:768px){
+  .section{ padding:clamp(52px,10vw,84px) 0; }
+  .section-head{ margin-bottom:32px; }
+  :root{ --gutter: clamp(18px, 5vw, 40px); }
+}
+/* Keep the Graphic/Product switch visible in the header on mobile too
+   (it must stay reachable without opening the menu) — just made compact
+   enough to sit next to the logo and burger button. */
+@media(max-width:520px){
+  .nav-actions{ gap:10px; }
+  #site-nav .lens-toggle:not(.lens-toggle-mobile){ font-size:10px; padding:2px; }
+  #site-nav .lens-toggle:not(.lens-toggle-mobile) button{ padding:6px 9px; }
+  .logo img{ height:26px; }
+}
+@media(max-width:640px){
+  .project-row{ grid-template-columns:1fr; }
+  .project-index{ order:-1; }
+  .modal-gallery{ grid-template-columns:1fr; }
+  .contact-links{ grid-template-columns:1fr; }
+  .grid-mode{ grid-template-columns:repeat(2,1fr); }
+  .stat-row{ flex-direction:column; align-items:flex-start; gap:6px; }
+  .stat-label{ text-align:left; }
+  /* Full-width, stacked CTAs are easier to hit with a thumb than a wrapped
+     row of pill buttons. */
+  .hero-ctas{ flex-direction:column; align-items:stretch; }
+  .hero-ctas .btn{ justify-content:center; }
+  .contact-row{ flex-direction:column; align-items:stretch; }
+  .contact-row .btn{ justify-content:center; }
+}
+@media(max-width:430px){
+  .grid-mode{ grid-template-columns:1fr 1fr; gap:1px; }
+  .display-2{ font-size:clamp(32px,8vw,44px); }
+  .modal-content{ padding:20px; }
+  .testi-card{ flex-basis:88vw; padding:28px; }
+}
+@media(hover:none){
+  .cursor-dot,.cursor-label,.cursor-ring,.cursor-ripple{ display:none !important; }
+  body.cursor-ready, body.cursor-ready a, body.cursor-ready button{ cursor:auto; }
+}
+/* Landscape phones: hero used to eat the whole viewport height and push
+   the "scroll" hint off-screen — trim the vertical rhythm instead. */
+@media(max-height:500px) and (orientation:landscape){
+  #hero{ padding-top:100px; }
+  .hero-foot{ margin-top:20px; }
+}
