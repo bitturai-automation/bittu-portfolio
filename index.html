@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Bittu Rai — Brand Maker, Product & UI/UX Designer</title>
+<meta name="description" content="Bittu Rai — brand identity, product design and UI/UX. Designing brands people remember, digital products people understand." />
+<link rel="canonical" href="https://bittu-portfolio-delta.vercel.app/" />
+
+<!-- Open Graph / Facebook, LinkedIn, WhatsApp preview -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bittu-portfolio-delta.vercel.app/" />
+<meta property="og:title" content="Bittu Rai — Brand Maker, Product & UI/UX Designer" />
+<meta property="og:description" content="Brand identity, product design and UI/UX. Designing brands people remember, digital products people understand." />
+<meta property="og:image" content="https://bittu-portfolio-delta.vercel.app/assets/img/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Bittu Rai" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bittu Rai — Brand Maker, Product & UI/UX Designer" />
+<meta name="twitter:description" content="Brand identity, product design and UI/UX. Designing brands people remember, digital products people understand." />
+<meta name="twitter:image" content="https://bittu-portfolio-delta.vercel.app/assets/img/og-cover.png" />
+
+<link rel="stylesheet" href="assets/styles.css" />
+
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/icon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/icon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/icon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/icon-180.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+</head>
+<body class="loading">
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader">
+    <div class="loader-half left">
+      <div class="loader-inner">
+        <p class="loader-name">Bittu Rai</p>
+        <p class="loader-tag">Designing Brands — Building Experiences</p>
+      </div>
+    </div>
+    <div class="loader-half right">
+      <div class="loader-inner">
+        <p class="loader-name">Bittu Rai</p>
+        <p class="loader-tag">Designing Brands — Building Experiences</p>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:8%;left:50%;transform:translateX(-50%);text-align:center;">
+      <div class="loader-count"><span id="loader-pct">00</span>%</div>
+      <div class="loader-bar"><span id="loader-bar-fill"></span></div>
+    </div>
+  </div>
+
+  <div id="cursor"><span id="cursor-text"></span></div>
+  <div id="scroll-progress"></div>
+
+  <nav id="nav">
+    <a href="#hero" class="nav-name" aria-label="Bittu Rai — home"><img class="nav-logo" src="assets/img/logo.png" alt="Bittu Rai"></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#journey-experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" id="nav-linkedin" class="nav-social" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor="LINKEDIN" hidden></a>
+      <a href="#contact" class="nav-cta" data-cursor="LET'S TALK"><span class="nav-cta-label">Let's Work Together</span> <span class="nav-cta-arrow">↗</span></a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#journey-experience">Experience</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="mobile-menu-cta" data-cursor="LET'S TALK">Let's Work Together <span class="arrow">↗</span></a>
+    <a href="#" id="mobile-linkedin" class="mobile-menu-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn" hidden>View LinkedIn ↗</a>
+  </div>
+
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-pin">
+      <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+        <source src="https://res.cloudinary.com/dk1kmgcqn/video/upload/v1789115318/15283120-hd_1920_1080_30fps_vfqyhm.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+      <div class="hero-meta m1"><span class="dot"></span>Bittu Rai — Brand Maker</div>
+      <div class="hero-meta m2">India<br>2026</div>
+
+      <div class="hero-shape" style="width:120px;height:120px;background:var(--orange);top:36%;left:8%;"></div>
+      <div class="hero-shape" style="width:70px;height:70px;background:var(--paper);top:64%;right:14%;"></div>
+      <div class="hero-shape" style="width:44px;height:44px;background:var(--green-light);top:18%;right:30%;"></div>
+
+      <h1 class="hero-line" id="hero-line-1">More than<br>a designer</h1>
+      <p class="hero-line" id="hero-line-2">I am the<br>brand maker</p>
+
+      <div class="hero-meta m3">Graphic Design<br>Product Design</div>
+      <div class="hero-meta m4">UI/UX<br>Branding · AI</div>
+
+      <div class="hero-cta" id="hero-cta">
+        <a class="btn btn-fill" href="#contact" data-cursor="MOVE">Contact Me</a>
+        <a class="btn btn-line" href="assets/resume/bittu-rai-resume.pdf" download="Bittu-Rai-Resume.pdf" id="resume-btn" data-cursor="MOVE">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AVAILABILITY ============ -->
+  <section id="availability">
+    <div class="avail-inner">
+      <div class="avail-tag"><span class="avail-dot"></span>Available for work — worldwide</div>
+      <div class="marquee-viewport">
+        <div class="marquee-row" id="availmq"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section id="stats" class="stats-section">
+    <div class="wrap">
+      <div id="stats-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <img class="about-bg" src="https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131011/15_xmiwvw.png" alt="" aria-hidden="true">
+    <div class="wrap">
+      <div class="bio-block bio-block-center">
+        <p class="bio-position reveal" id="bio-position"></p>
+        <p class="bio-words" id="bio-words"></p>
+        <div class="bio-tags">
+          <span class="bio-tag">Startups</span>
+          <span class="bio-tag">Founders</span>
+          <span class="bio-tag">Developers</span>
+          <span class="bio-tag">Agencies</span>
+          <span class="bio-tag">NGOs</span>
+          <span class="bio-tag">International Clients</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);">What I do</h2>
+        <p class="sub">From the first idea to the final pixel.</p>
+      </div>
+      <div id="services-list"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="work-head reveal">
+        <h2 class="big-heading work-title">Selected work</h2>
+        <div class="work-head-row">
+          <p class="sub work-sub">A little bit of everything. Designed with intention.</p>
+          <div class="toggle" id="work-toggle">
+            <button class="active" data-mode="graphic">Graphic Work</button>
+            <button data-mode="uiux">UI / UX Work</button>
+          </div>
+        </div>
+      </div>
+      <div class="cat-nav" id="cat-nav"></div>
+      <div class="project-grid" id="project-grid"></div>
+    </div>
+  </section>
+
+  <!-- Project detail overlay -->
+  <div id="project-modal">
+    <div id="modal-backdrop"></div>
+    <div id="modal-card">
+      <button class="modal-close" id="modal-close">Close ✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Fullscreen image lightbox -->
+  <div id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">Close ✕</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- ============ BRANDS ============ -->
+  <section id="brands" class="section noise cine-dark">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:0;">
+        <h2 class="big-heading" style="font-size:clamp(28px,4vw,48px);">Brands I've worked with</h2>
+        <p class="sub" style="color:var(--paper);opacity:.6;">Design doesn't happen in isolation.</p>
+      </div>
+      <div id="brands-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);">How I work</h2>
+        <p class="sub">A process that holds up under a deadline.</p>
+      </div>
+      <div class="process-track" id="process-track">
+        <div class="process-line"><span id="process-line-fill"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <!-- ============ JOURNEY + EXPERIENCE (combined 2-column) ============ -->
+  <section id="journey-experience" class="section">
+    <div class="wrap je-grid">
+
+      <div class="je-col je-left">
+        <div class="section-head reveal">
+          <h2 class="big-heading" style="font-size:clamp(30px,4vw,56px);">The person behind the pixels</h2>
+        </div>
+        <div class="journey" id="education-timeline"></div>
+
+        <div class="section-head reveal je-certs-head">
+          <h2 class="big-heading" style="font-size:clamp(26px,3.4vw,42px);">Certifications</h2>
+        </div>
+        <div class="certs-row" id="certs-row"></div>
+      </div>
+
+      <div class="je-col je-right">
+        <div class="section-head reveal">
+          <h2 class="big-heading" style="font-size:clamp(30px,4vw,56px);">Where I've been</h2>
+        </div>
+        <div class="roadmap" id="experience-timeline"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section id="stack" class="section noise cine-dark">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);color:var(--paper);">Tools I speak</h2>
+      </div>
+      <div id="stack-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);">Testimonials</h2>
+        <p class="sub">Good design is better when people remember the experience.</p>
+      </div>
+      <div id="testimonials-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section noise cine-dark">
+    <div class="wrap">
+      <h2 class="contact-head reveal">Let's make<br>something people<br>remember.</h2>
+      <p class="contact-sub reveal">Have a brand, product, website or crazy idea that needs a better visual direction?</p>
+      <div class="contact-buttons">
+        <a class="big-btn" id="btn-whatsapp" target="_blank" rel="noopener" data-cursor="LET'S TALK">WhatsApp <span class="arrow">↗</span></a>
+        <a class="big-btn" id="btn-email" data-cursor="LET'S TALK">Email Me <span class="arrow">↗</span></a>
+        <a class="big-btn" id="btn-call" data-cursor="LET'S TALK">Call Me <span class="arrow">↗</span></a>
+      </div>
+      <p class="contact-direct" id="contact-direct"></p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="site-footer">
+    <div class="wrap footer-wrap">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo" aria-label="Bittu Rai — home"><img src="assets/img/logo.png" alt="Bittu Rai"></a>
+        <div class="footer-socials" id="footer-socials"></div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" id="footer-copy"></p>
+        <a href="#hero" class="footer-top-link" data-cursor="TOP">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top" data-cursor="TOP">↑</button>
+
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/projects-data.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
