@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Bittu Rai — Brand Maker, Product & UI/UX Designer</title>
+<meta name="description" content="Bittu Rai — brand identity, product design and UI/UX. Designing brands people remember, digital products people understand." />
+<link rel="canonical" href="https://bittu-portfolio-delta.vercel.app/" />
+
+<!-- Open Graph / Facebook, LinkedIn, WhatsApp preview -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bittu-portfolio-delta.vercel.app/" />
+<meta property="og:title" content="Bittu Rai — Brand Maker, Product & UI/UX Designer" />
+<meta property="og:description" content="Brand identity, product design and UI/UX. Designing brands people remember, digital products people understand." />
+<meta property="og:image" content="https://bittu-portfolio-delta.vercel.app/assets/img/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Bittu Rai" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bittu Rai — Brand Maker, Product & UI/UX Designer" />
+<meta name="twitter:description" content="Brand identity, product design and UI/UX. Designing brands people remember, digital products people understand." />
+<meta name="twitter:image" content="https://bittu-portfolio-delta.vercel.app/assets/img/og-cover.png" />
+
+<link rel="stylesheet" href="assets/styles.css" />
+
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/icon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/icon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/icon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/icon-180.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+</head>
+<body class="loading">
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader" role="status" aria-label="Loading portfolio">
+    <div class="ld-top">
+      <span class="ld-name">Bittu Rai</span>
+      <span class="ld-meta">Portfolio — 2026</span>
+    </div>
+    <div class="ld-center">
+      <div class="ld-mask"><span class="ld-word" id="ld-word">Graphic Design</span></div>
+    </div>
+    <div class="ld-bottom">
+      <div class="ld-count"><span id="loader-pct">00</span><small>%</small></div>
+      <span class="ld-hint">Click to skip</span>
+    </div>
+    <div class="ld-bar"><span id="loader-bar-fill"></span></div>
+  </div>
+
+  <div id="cursor"><span id="cursor-text"></span></div>
+  <div id="scroll-progress"></div>
+
+  <nav id="nav">
+    <a href="#hero" class="nav-name" aria-label="Bittu Rai — home"><img class="nav-logo" src="assets/img/logo.png" alt="Bittu Rai"></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#journey-experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" id="nav-linkedin" class="nav-social" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor="LINKEDIN" hidden></a>
+      <a href="#contact" class="nav-cta" data-cursor="LET'S TALK"><span class="nav-cta-label">Let's Work Together</span> <span class="nav-cta-arrow">↗</span></a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#journey-experience">Experience</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="mobile-menu-cta" data-cursor="LET'S TALK">Let's Work Together <span class="arrow">↗</span></a>
+    <a href="#" id="mobile-linkedin" class="mobile-menu-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn" hidden>View LinkedIn ↗</a>
+  </div>
+
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-pin">
+      <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+        <source src="https://res.cloudinary.com/dk1kmgcqn/video/upload/v1789115318/15283120-hd_1920_1080_30fps_vfqyhm.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay noise"></div>
+      <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
+
+      <div class="hero-shape" data-depth="0.035" style="width:220px;height:220px;background:var(--orange);top:28%;left:6%;"></div>
+      <div class="hero-shape" data-depth="0.05" style="width:140px;height:140px;background:var(--green-light);top:60%;right:9%;"></div>
+      <div class="hero-shape" data-depth="0.02" style="width:84px;height:84px;background:var(--paper);top:15%;right:26%;"></div>
+
+      <!-- desktop-only side columns: fill the wide viewport with quiet, factual detail -->
+      <div class="hero-flank" aria-hidden="true">
+        <div class="hero-side hero-side-left hero-anim">
+          <p><span>Based in</span><b>India</b></p>
+          <p><span>Working</span><b>Worldwide</b></p>
+          <p><span>Portfolio</span><b>2026</b></p>
+        </div>
+        <div class="hero-side hero-side-right hero-anim">
+          <span class="hero-side-label">Disciplines</span>
+          <ol>
+            <li><i>01</i>Graphic Design</li>
+            <li><i>02</i>UI/UX</li>
+            <li><i>03</i>Web</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="hero-main">
+        <p class="hero-kicker hero-anim">Graphic Design × UI/UX × Web</p>
+        <h1 class="hero-headline" data-depth="0.02">
+          <span class="hl-line"><span class="hl-inner">I make ideas</span></span>
+          <span class="hl-line"><span class="hl-inner hl-serif">impossible</span></span>
+          <span class="hl-line"><span class="hl-inner">to ignore.</span></span>
+        </h1>
+        <p class="hero-sub hero-anim">Turning ideas into brands, campaigns and digital experiences for startups and growing businesses.</p>
+
+        <div class="hero-cta hero-anim" id="hero-cta">
+          <a class="btn btn-fill btn-primary magnetic" href="#work" data-cursor="VIEW WORK">View My Work <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-line btn-secondary magnetic" href="#contact" data-cursor="LET'S TALK">Let's Work Together <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="hero-meta hero-anim">
+          <p class="hero-avail"><span class="dot" aria-hidden="true"></span>Available for Full-Time · Contract · Freelance</p>
+          <a class="hero-resume" href="assets/resume/bittu-rai-resume.pdf" download="Bittu-Rai-Resume.pdf" id="resume-btn">Download Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-badge hero-anim" id="heroBadge" aria-hidden="true">
+        <svg class="hero-badge-ring" viewBox="0 0 160 160" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path id="heroBadgePath" fill="none" d="M 80,80 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0" />
+          <text><textPath href="#heroBadgePath" xlink:href="#heroBadgePath" startOffset="0%">Scroll to explore • Scroll to explore • </textPath></text>
+        </svg>
+        <span class="hero-badge-arrow">↓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AVAILABILITY ============ -->
+  <section id="availability">
+    <div class="avail-inner">
+      <div class="avail-tag"><span class="avail-dot"></span>Available for work — worldwide</div>
+      <div class="marquee-viewport">
+        <div class="marquee-row" id="availmq"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section id="stats" class="stats-section">
+    <div class="wrap">
+      <div id="stats-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <img class="about-bg" src="https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131011/15_xmiwvw.png" alt="" aria-hidden="true">
+    <div class="wrap">
+      <div class="bio-block bio-block-center">
+        <p class="bio-position reveal" id="bio-position"></p>
+        <p class="bio-words" id="bio-words"></p>
+        <div class="bio-tags">
+          <span class="bio-tag">Startups</span>
+          <span class="bio-tag">Founders</span>
+          <span class="bio-tag">Developers</span>
+          <span class="bio-tag">Agencies</span>
+          <span class="bio-tag">NGOs</span>
+          <span class="bio-tag">International Clients</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <!-- ============ PROJECTS ============ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="work-head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2 class="big-heading work-title">Work that solves more than a visual problem.</h2>
+        <div class="work-head-row">
+          <p class="sub work-sub">From brand identities and marketing campaigns to UI/UX and digital experiences, these projects show how I turn ideas and briefs into clear, purposeful design.</p>
+          <div class="toggle" id="work-toggle">
+            <button class="active" data-mode="graphic">Graphic Work</button>
+            <button data-mode="uiux">UI / UX Work</button>
+          </div>
+        </div>
+      </div>
+      <div class="cat-nav" id="cat-nav"></div>
+      <div class="project-grid" id="project-grid"></div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);">What I do</h2>
+        <p class="sub">Design that helps a business explain itself, from the first idea to the final pixel.</p>
+      </div>
+      <div id="services-list"></div>
+    </div>
+  </section>
+
+  <!-- ============ WHO I HELP ============ -->
+  <section id="who" class="section who">
+    <div class="wrap who-grid">
+      <div class="who-intro reveal">
+        <p class="eyebrow">Who I help</p>
+        <h2 class="who-title">Built for teams that are building something.</h2>
+        <p class="who-copy">I work with people turning ideas, products and businesses into something real.</p>
+      </div>
+      <ol class="who-list" id="who-list"></ol>
+    </div>
+  </section>
+
+  <!-- Project detail overlay -->
+  <div id="project-modal">
+    <div id="modal-backdrop"></div>
+    <div id="modal-card" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="modal-close" id="modal-close">Close ✕</button>
+      <div id="modal-content" data-lenis-prevent></div>
+    </div>
+  </div>
+
+  <!-- Fullscreen image lightbox -->
+  <div id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">Close ✕</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- ============ BRANDS ============ -->
+  <section id="brands" class="section noise cine-dark">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:0;">
+        <h2 class="big-heading" style="font-size:clamp(28px,4vw,48px);">Brands I've worked with</h2>
+        <p class="sub" style="color:var(--paper);opacity:.6;">Design doesn't happen in isolation.</p>
+      </div>
+      <div id="brands-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);">How I work</h2>
+        <p class="sub">A process that holds up under a deadline.</p>
+      </div>
+      <div class="process-track" id="process-track">
+        <div class="process-line"><span id="process-line-fill"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <!-- ============ JOURNEY + EXPERIENCE (combined 2-column) ============ -->
+  <section id="journey-experience" class="section">
+    <div class="wrap je-grid">
+
+      <div class="je-col je-left">
+        <div class="section-head reveal">
+          <h2 class="big-heading" style="font-size:clamp(30px,4vw,56px);">The person behind the pixels</h2>
+        </div>
+        <div class="journey" id="education-timeline"></div>
+
+        <div class="section-head reveal je-certs-head">
+          <h2 class="big-heading" style="font-size:clamp(26px,3.4vw,42px);">Certifications</h2>
+        </div>
+        <div class="certs-row" id="certs-row"></div>
+      </div>
+
+      <div class="je-col je-right">
+        <div class="section-head reveal">
+          <h2 class="big-heading" style="font-size:clamp(30px,4vw,56px);">Where I've been</h2>
+        </div>
+        <div class="roadmap" id="experience-timeline"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section id="stack" class="section noise cine-dark">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);color:var(--paper);">Tools I speak</h2>
+      </div>
+      <div id="stack-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="big-heading" style="font-size:clamp(32px,5vw,64px);">Testimonials</h2>
+        <p class="sub">Good design is better when people remember the experience.</p>
+      </div>
+      <div id="testimonials-content"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section noise cine-dark">
+    <div class="wrap">
+      <h2 class="contact-head reveal">Have an idea<br>worth building?</h2>
+      <p class="contact-sub reveal">Let's turn it into something people notice.</p>
+      <div class="contact-buttons">
+        <a class="big-btn is-primary" id="btn-start" data-cursor="LET'S TALK">Start a Project <span class="arrow">↗</span></a>
+        <a class="big-btn" id="btn-work" target="_blank" rel="noopener" data-cursor="LET'S TALK">Work With Me <span class="arrow">↗</span></a>
+      </div>
+      <p class="contact-avail"><span class="dot" aria-hidden="true"></span>Available for Full-Time · Contract · Freelance</p>
+      <p class="contact-direct" id="contact-direct"></p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="site-footer">
+    <div class="wrap footer-wrap">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo" aria-label="Bittu Rai — home"><img src="assets/img/logo.png" alt="Bittu Rai"></a>
+        <div class="footer-socials" id="footer-socials"></div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" id="footer-copy"></p>
+        <a href="#hero" class="footer-top-link" data-cursor="TOP">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top" data-cursor="TOP">↑</button>
+
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/projects-data.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
