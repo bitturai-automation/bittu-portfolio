@@ -1,0 +1,649 @@
+const PROJECTS_DATA = [
+  {
+    "title": "Jain Realties",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Story",
+    "description": "Jain Realties is a Nagpur-based real estate brand focused on premium residential projects. My role was to create a strong and consistent visual identity across their digital and outdoor marketing, with a design direction focused on premium, classy and aspirational communication.",
+    "challenge": "The brand needed social media creatives that could communicate the premium lifestyle and value of its real estate projects while standing out in a highly competitive real estate market. The key challenge was to move beyond generic property advertisements and create visuals that felt premium, sophisticated and brand-led.",
+    "approach": "I developed a visual direction centered around premium & classy aesthetics, strong typography, high-quality property visuals, sophisticated colour combinations, clean visual hierarchy, aspirational lifestyle communication and consistent brand presentation. Every creative was designed to make the property feel more than just a building — a premium lifestyle investment.<br><br>What I designed spans social media posts (campaign creatives, promotional posts, property highlights and engagement-focused content), Instagram stories (interactive and visually engaging stories for property promotion, campaigns and brand communication) and billboards & outdoor creatives (large-format advertising with strong visual impact and quick readability).<br><br>Premium doesn't mean complicated — it means every visual element feels intentional. I focused on creating designs with enough visual breathing room while using typography, imagery and composition to communicate luxury and trust.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789243242/22_w1fj0u.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789243275/26_s1vdgm.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789243243/6_p2surp.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789243239/jain_poster_2_nphvza.png"
+    ],
+    "role": "Graphic Designer / Visual Designer",
+    "tools": [
+      "Photoshop",
+      "Illustrator",
+      "Figma",
+      "Canva"
+    ],
+    "outcome": "After implementing a more premium and consistent visual direction, the brand experienced stronger social media presence and increased customer/sales engagement. The creative strategy helped the brand communicate its projects more effectively and build a stronger visual presence across digital and offline channels. — Transforming real estate marketing into premium visual experiences that attract attention, build trust and drive engagement."
+  },
+  {
+    "title": "The Wild Cafe",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Story",
+    "description": "The Wild Cafe is a cafe brand focused on creating a memorable and inviting experience for its customers. I worked on developing engaging visual creatives that helped the brand communicate its offers, ambience and overall personality across both digital and offline touchpoints.",
+    "challenge": "The brand needed visually appealing marketing creatives that could grab attention, communicate offers quickly and encourage customers to visit and engage with the cafe. The challenge was to create designs that felt fresh, attractive and consistent while working across different formats.",
+    "approach": "I created a visual direction that focused on eye-catching compositions, appetizing food & beverage presentation, strong typography, clear promotional messaging, consistent brand styling, social-media-friendly layouts and high-impact offline advertising.<br><br>What I designed spans social media stories (promotional and engagement-focused stories built to capture attention and drive visits), posters (campaign and promotional posters designed for high visual impact), banners (digital and promotional banners communicating offers and campaigns) and standee designs (offline promotional creatives to attract attention inside and around the cafe).",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789241935/5_ktkfwf.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789241936/3_tlucao.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789241933/4_llf0lf.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789241933/2_pakpy8.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789241925/1_hc2j3b.png"
+    ],
+    "role": "Graphic Designer / Visual Designer",
+    "tools": [
+      "Photoshop",
+      "Illustrator",
+      "Canva"
+    ],
+    "outcome": "The redesigned marketing communication helped create a stronger and more engaging visual presence for The Wild Cafe. The campaigns contributed to increased customer attention and growth in sales, helping the brand communicate its offerings more effectively across digital and physical touchpoints. — Creating appetizing, attention-grabbing visuals that turn cafe promotions into experiences customers want to explore."
+  },
+  {
+    "title": "Atulya Jewellers",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Story",
+    "description": "Atulya Jewellers is a jewellery brand where the visual presentation plays an important role in communicating luxury, elegance and trust. I worked on the brand's social media design, creating premium and visually consistent content to strengthen its digital presence.",
+    "challenge": "Jewellery is a highly visual category, so the social media presence needed to feel premium, sophisticated and aspirational while keeping the jewellery itself at the center of attention. The goal was to create content that looked polished and consistent across the brand's social platforms.",
+    "approach": "I developed creatives around luxury-focused visual compositions, elegant typography, premium colour combinations, high-quality jewellery presentation, clean layouts and visual hierarchy, festive & occasion-based creatives and consistent social media aesthetics.<br><br>What I designed spans social media posts (premium product showcases, promotional creatives and brand communication), social media stories (engaging story designs for products, occasions, campaigns and festive communication) and campaign creatives (visually strong creatives built around important jewellery campaigns and occasions).",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789242807/7_oh4tci.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789242809/6_lxoiqg.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789242807/5_hp02tl.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786109905/WhatsApp_Image_2026-08-07_at_6.42.01_PM_2_myvckr.jpg"
+    ],
+    "role": "Graphic Designer / Social Media Designer",
+    "tools": [
+      "Photoshop",
+      "Illustrator",
+      "Canva",
+      "Figma"
+    ],
+    "outcome": "Through a more consistent, premium and polished visual direction, Atulya Jewellers developed a stronger social media presence and a more recognizable visual identity. The improved presentation helped the brand communicate its jewellery in a more luxurious and engaging way across social media. — Building a premium digital presence for jewellery through elegant visuals, refined composition and luxury-focused storytelling."
+  },
+  {
+    "title": "SDPL",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Story",
+    "description": "SDPL is a real estate brand for which I worked across multiple marketing touchpoints, creating a consistent and premium visual presence across digital, social media and outdoor advertising. The objective was to present the brand and its properties in a visually engaging way while maintaining consistency across different formats.",
+    "challenge": "Real estate marketing requires creatives that can communicate property value, lifestyle and key information quickly while still looking premium and attention-grabbing. The challenge was to adapt the brand communication across multiple platforms and formats without losing visual consistency.",
+    "approach": "I developed a visual communication system focused on premium property presentation, strong typography & hierarchy, high-impact compositions, consistent brand styling, lifestyle-focused visuals, promotional storytelling and AI-assisted visual content.<br><br>What I designed spans social media designs (property promotions, campaigns, informative posts and engagement-focused creatives), AI videos (AI-assisted promotional videos and visual storytelling showcasing properties in a more engaging format), banners & posters (high-impact promotional creatives for campaigns and property communication), standee designs (print-ready promotional designs for on-ground marketing and property events) and hoarding designs (large-format outdoor creatives for maximum visibility and quick communication).",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244055/15_dqca0n.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244052/16_dy1yub.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244042/17_a4rc23.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244041/18_cjwiaz.png"
+    ],
+    "role": "Graphic Designer / Visual Designer",
+    "tools": [
+      "Photoshop",
+      "Illustrator",
+      "Canva",
+      "Figma",
+      "AI Design Tools"
+    ],
+    "outcome": "By creating a consistent visual language across social media, AI video, print and outdoor advertising, I helped build a stronger and more recognizable visual presence for SDPL. — Designing real estate campaigns across digital, AI-powered video and outdoor media to turn properties into compelling visual stories."
+  },
+  {
+    "title": "Bon Patisserie",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Story",
+    "description": "Bon Patisserie is a cafe brand that wanted its digital presence to feel funky, playful and creative rather than following a conventional cafe design style. I worked on creating visually expressive social media content that captured the brand's personality and made each creative instantly eye-catching.",
+    "challenge": "The key challenge was to make the brand stand out in a crowded food & cafe space while keeping the communication fun, energetic and visually memorable.",
+    "approach": "I explored a bold visual direction using funky compositions, playful typography, vibrant visual elements, creative food presentation, unexpected layouts, strong colour combinations and social-first compositions. The goal was to make every post feel like a piece of creative content, not just a promotional advertisement.<br><br>What I designed spans social media graphics (creative posts built around products, promotions and brand communication) and posters (bold promotional posters with expressive layouts and strong visual hierarchy). Design objective: make the brand feel as exciting visually as the experience it offers.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786109910/WhatsApp_Image_2026-08-07_at_6.42.02_PM_e1duur.jpg",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786109907/WhatsApp_Image_2026-08-07_at_6.42.02_PM_1_ud5ltm.jpg",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789242726/bon_story_2_im4ybh.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789242726/bon_story_1_wt82pg.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789242725/2_stories_vaewr7.png"
+    ],
+    "role": "Graphic Designer / Visual Designer",
+    "tools": [
+      "Photoshop",
+      "Illustrator",
+      "Canva"
+    ],
+    "outcome": "Bringing a funky, playful visual personality to Bon Patisserie through bold social media and campaign design — helping the brand feel as exciting visually as the experience it offers."
+  },
+  {
+    "title": "Other Brands — Social Media Story Design",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Story",
+    "description": "A curated collection of social media story designs created for multiple brands across different industries, each requiring a different visual language and creative direction.",
+    "challenge": "Every brand has a different personality, audience and communication style. The challenge was to create stories that were brand-specific, visually engaging and easy to consume within seconds.",
+    "approach": "For each brand, I adapted the design according to its identity and campaign objective, experimenting with typography & visual hierarchy, brand-specific colour palettes, product-focused compositions, creative layouts, promotional storytelling, festive & occasion-based content and motion-friendly visual concepts.<br><br>What I designed: Instagram stories — promotional stories, product showcases, festive creatives, announcements, campaigns and engagement-focused content for multiple brands. Design objective: different brands, different personalities, one goal — make every story worth stopping for.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244617/Luxury_Speaks_Softly_4_ylwstd.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244623/Create_a_premium_cinematic_vertical_916_real-estate_advertisement_exactly_10_seconds_long._Use_the_uploaded_Happy_Homes_building_image_as_the_EXACT_architectural_reference._Preserve_the_building_d5q9ck.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244620/askaadityaa_kaglrm.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244618/story_4_pxfuki.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244617/Create_a_premium_cinematic_vertical_916_real-estate_advertisement_exactly_10_seconds_long._Use_the_uploaded_Happy_Homes_building_image_as_the_EXACT_architectural_reference._Preserve_the_building_1_yg8vbl.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1789244226/Orange_Alchemy_2_mwamgu.png"
+    ],
+    "role": "Graphic Designer / Social Media Designer",
+    "tools": [
+      "Photoshop",
+      "Illustrator",
+      "Canva",
+      "Figma"
+    ],
+    "outcome": "A collection of social media stories designed across brands, industries and visual styles — adapting creativity to every brand's unique voice."
+  },
+  {
+    "title": "Zest",
+    "client": "Zest",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A social media post for Zest, my college fest, designed to stand out in students' crowded feeds.",
+    "challenge": "The post had to grab attention among hundreds of other event posts on students' feeds, and the key details still had to be readable at thumbnail size.",
+    "approach": "I kept the design bold and energetic, using bright colours and strong typography to match the excitement of the fest. Key event details were placed in a clear hierarchy so they stay readable even as a small thumbnail.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1787769706/zest_fnjpvt.jpg"
+    ],
+    "outcome": "A bold, easy-to-scan fest post, and one of my early lessons in designing for a crowded, fast-scrolling feed."
+  },
+  {
+    "title": "Sponsorship Invitation — Nakash Aziz Live",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A sponsorship invitation for a live concert at my college fest, Zest, made to be sent to potential sponsors and brands.",
+    "challenge": "It had to look credible to a business audience while still carrying the fest's energetic branding.",
+    "approach": "I kept the layout structured and professional, and arranged the essentials — artist, date, venue and contact — so they can be scanned in seconds.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1787769699/Sponsorship_Invitation_-_Nakash_Aziz_Live_in_Concert_at_Lingayas_Vidyapeeth_We_are_thrille_zxnmc2.jpg"
+    ],
+    "outcome": "An invitation designed to make sponsors take the opportunity seriously at first glance."
+  },
+  {
+    "title": "FlashAid Ads",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "An ad creative for a client whose main requirement was performance — the design needed to convert, not just look good.",
+    "challenge": "The creative had to communicate its offer almost instantly and push people to act, rather than just look attractive.",
+    "approach": "I focused on a clear value proposition up top, a strong-contrast call-to-action and minimal distractions around it, based on what typically performs well in paid social. Colour and copy hierarchy were arranged so the offer is understood in under two seconds.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1787771287/FLASHAID_ADS_cwmipr.png"
+    ],
+    "outcome": "A clean, conversion-focused ad that puts clarity ahead of pure aesthetics."
+  },
+  {
+    "title": "Jewellery",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A social media post for a jewellery client who wanted a classy, premium look.",
+    "challenge": "The post had to feel premium, never cheap or cluttered, with the product as the clear focus.",
+    "approach": "I leaned into darker tones, subtle metallic accents and generous spacing — the visual language I use across most of my jewellery and luxury work. The product stays the visual focus, with type and graphics in a supporting role, and every choice from font weight to spacing was made with restraint.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786109904/WhatsApp_Image_2026-08-07_at_6.42.01_PM_1_yhiysa.jpg"
+    ],
+    "outcome": "A premium-feeling post that shows how tone and restraint can make a design feel luxurious."
+  },
+  {
+    "title": "Selected Demo Post",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A self-initiated demo post, created without a live client brief to show my design range.",
+    "challenge": "With no client brief, the goal was to show range and get selected for design opportunities by treating the post like a real project.",
+    "approach": "I picked a concept, researched references and refined the layout through multiple iterations before finalising it.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786109913/WhatsApp_Image_2026-08-07_at_6.42.00_PM_mxtwuf.jpg"
+    ],
+    "outcome": "The post helped me get selected for actual paid opportunities, and proved that a strong process matters even on self-initiated work."
+  },
+  {
+    "title": "Natural Product",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A post for a natural product brand that wanted a unique ad showing the product in enough detail to explain what it does.",
+    "challenge": "Show the product clearly enough that people understand what it does and why it's different, instead of just decorating it.",
+    "approach": "I researched how similar natural and organic product brands present ingredients and benefits visually, then built a layout that balances product photography with clear, scannable text.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786105116/img-024-56f2e131a8_hyjyft.jpg"
+    ],
+    "outcome": "A post that informs as much as it attracts, with the product's story clear at a glance."
+  },
+  {
+    "title": "Stories Shaping Tomorrow",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A TEDx post made for a founder speaker, with one instruction: keep it simple, with her face as the main focus.",
+    "challenge": "Keep the design simple and make the speaker, not the graphics, the focal point.",
+    "approach": "I designed the layout around her portrait first, then added minimal supporting text and the TEDx branding without letting it compete with her. Typography stays understated so the focus never shifts away from the speaker.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786127800/Stories_Shaping_Tomorrow_g6jcbx.png"
+    ],
+    "outcome": "A clean speaker post designed around a person's presence rather than around graphics."
+  },
+  {
+    "title": "Design Post",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A post for a jewellery brand that wanted its pieces shown in a premium, classy design.",
+    "challenge": "Reflect the craftsmanship of the product and give the jewellery centre stage.",
+    "approach": "I built the layout around close, detailed product shots on a dark, neutral background so the jewellery pops without extra noise. Typography and spacing were kept minimal and elegant, in line with the premium tone the client asked for.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786130895/9_jlsfk0.png"
+    ],
+    "outcome": "A post that positions the jewellery as the centrepiece, exactly as the brief required."
+  },
+  {
+    "title": "Real Estate",
+    "category": "graphic",
+    "subcategory": "Social Media Design — Post",
+    "description": "A post for a real estate brand that wanted a premium, unique design with a sense of nature.",
+    "challenge": "Move away from the usual plain floor-plan style post while keeping a premium tone.",
+    "approach": "I researched how upscale real estate brands blend architecture with natural elements like greenery, sky and light, then built a layout combining property visuals with organic textures. The typography stays clean and confident to match the premium tone.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1787769818/bite_5_x9fm0h.png"
+    ],
+    "outcome": "A real estate post that pushes beyond the category's usual visual clichés."
+  },
+  {
+    "title": "One Pager",
+    "category": "graphic",
+    "subcategory": "Posters & Banners",
+    "description": "An animated one-pager for a foreign client, made to be premium, classy and easy to understand.",
+    "challenge": "Help her own clients understand the brand at a glance, all in a single animated page.",
+    "approach": "I structured the content in a clear top-to-bottom flow covering brand intro, offerings and contact, and used subtle motion to draw attention without overwhelming the reader. The animation was built to loop cleanly and work well when shared as a link or GIF.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1787772063/one_pager_1_sz3gjh.gif"
+    ],
+    "outcome": "A one-page piece that makes a strong first impression in the first few seconds."
+  },
+  {
+    "title": "Zest Collage",
+    "client": "Zest",
+    "category": "graphic",
+    "subcategory": "Posters & Banners",
+    "description": "A poster for my college fest, Zest, representing every event happening across the fest in a single visual.",
+    "challenge": "Fit every event of the fest into one poster without it looking cluttered.",
+    "approach": "I approached it like a collage, collecting visuals and details from each event and arranging them so the poster feels lively and complete. Hierarchy makes sure the fest name and date stand out first, before the individual events.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786115036/ZEST_INVITATION.pdf_iidlcq.png"
+    ],
+    "outcome": "A lively, complete poster — one of my favourite examples of managing a lot of information in one composition."
+  },
+  {
+    "title": "Influencer Post",
+    "category": "graphic",
+    "subcategory": "Posters & Banners",
+    "description": "A design made for a friend to showcase her presence and pricing to potential clients.",
+    "challenge": "Make a personal brand feel personal and approachable while still looking professional enough to be taken seriously.",
+    "approach": "I kept the layout simple and confident, with a strong personal visual up top and pricing and offerings laid out in an easy-to-scan format below.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786115002/Nuzhath_Khan_AED_e7ie4f.png"
+    ],
+    "outcome": "A clear personal-brand design that presents her presence and pricing at a glance."
+  },
+  {
+    "title": "Cloth Banner",
+    "category": "graphic",
+    "subcategory": "Website Banner Design",
+    "description": "A homepage hero banner for Shree, a clothing brand.",
+    "challenge": "A hero banner is often the first thing a visitor sees, so it needed one clear focal point and a fashion-led identity.",
+    "approach": "I made the product the hero of the composition, with typography and colour chosen to reflect the brand's fashion identity, and kept the layout clean instead of using competing elements.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786123576/1_su6eyp.png"
+    ],
+    "outcome": "A clean banner, built to load fast and look sharp across different screen sizes."
+  },
+  {
+    "title": "Beauty Brand",
+    "category": "graphic",
+    "subcategory": "Website Banner Design",
+    "description": "A website banner for a beauty brand.",
+    "challenge": "Grab attention right at the top of the site and set the tone for the rest of the visit.",
+    "approach": "I used soft, flattering tones and elegant typography to match the beauty category's visual language, keeping the product as the clear focal point. Spacing and contrast were used deliberately so the banner feels premium rather than crowded with promotional text.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786123573/2_tb4syb.png"
+    ],
+    "outcome": "A banner designed as a strong first impression, not just a filler graphic."
+  },
+  {
+    "title": "Family Spa Brand",
+    "category": "graphic",
+    "subcategory": "Website Banner Design",
+    "description": "A homepage banner for a family spa brand.",
+    "challenge": "Feel warm and inviting rather than clinical, and convey relaxation and trust.",
+    "approach": "I chose soft, calming colours and gentle typography, and kept enough breathing room so the banner feels peaceful, not busy.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786123572/3_gstldc.png"
+    ],
+    "outcome": "A banner designed to make a visitor feel instantly at ease."
+  },
+  {
+    "title": "Zest Fest Invitation",
+    "client": "Zest",
+    "category": "graphic",
+    "subcategory": "Printing Material",
+    "description": "My college fest invite, designed as a single collage banner that brings every Zest event into one shareable visual.",
+    "challenge": "It needed to work both as a print banner and as a shareable social invite.",
+    "approach": "I approached it the same way as my Zest poster, gathering visuals from each event and arranging them with clear hierarchy so the fest name stands out first, and kept text legible at multiple sizes.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1787770657/ZEST_INVITATION_bmhfqd.jpg"
+    ],
+    "outcome": "One asset that works across two different formats."
+  },
+  {
+    "title": "INDUS AVIVA",
+    "category": "graphic",
+    "subcategory": "Printing Material",
+    "description": "Indus Aviva is an Indian water storage tank manufacturer that wanted a minimal, premium look for its company profile.",
+    "challenge": "Present an affordable but quality-focused manufacturer in a minimal, premium and professional way.",
+    "approach": "I started by understanding their positioning, then researched how similar B2B manufacturing brands present themselves professionally. I kept the layout clean and spacious, using generous white space and a simple grid so the document feels premium and easy to navigate. The final profile reflects the brand's mission of accessibility and quality without feeling cluttered.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786132363/17_hvzua1.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786132406/18_f3kgkd.png"
+    ],
+    "role": "Graphic Designer",
+    "tools": [
+      "Illustrator",
+      "Photoshop"
+    ],
+    "outcome": "Welcome to Indus Aviva, where kindness and a desire to make a difference drive our mission. Our name reflects our Indian heritage and our commitment to ushering in a new era of hope and renewal for the common man. The name Aviva, meaning \"a new springtime,\" symbolizes our desire to bring about positive change in the lives of those we serve. The COVID-19 pandemic inspired us to contribute to our society, realizing that earning from business enables us to provide meaningful support. We established Indus Aviva in 2021, focusing on manufacturing superior, affordable, and accessible water storage tanks for all."
+  },
+  {
+    "title": "Abgelica Enterprises",
+    "category": "graphic",
+    "subcategory": "Printing Material",
+    "description": "Abgelica Enterprises is a Delhi-headquartered manpower supply company serving clients across India.",
+    "challenge": "The brief was for a very classy, simple design that's easy to understand at a glance.",
+    "approach": "I researched how established B2B service companies structure their profiles — services, experience and sectors served — and organised the content in that same logical, scannable order. Typography and colour were kept restrained so the document reads as professional and trustworthy rather than flashy. The result is a company profile a decision-maker can skim in minutes and still walk away with a clear picture of the business.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786132409/15_ipmijq.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786132361/16_p9cxpw.png"
+    ],
+    "role": "Graphic Designer",
+    "tools": [
+      "Illustrator",
+      "Photoshop"
+    ],
+    "outcome": "We are one of the reputed manpower supply companies in India, headquartered in Delhi, focused on providing manpower supply services throughout India for the past 12 years. We are the one-stop solution for manpower supply in India, meeting the requirement of general and technical services for all major industrial sectors such as Facilities Management, Manpower & Security Service, and Horticulture & Exhibition Services. With over 12 years of service, we provide skilled and unskilled labour across different industrial sectors. Our goal is to provide quality manpower supply services to all our clients in India."
+  },
+  {
+    "title": "AI Video Concept 1",
+    "category": "graphic",
+    "subcategory": "AI Video",
+    "description": "A short vertical AI-generated video concept, made for social media and brand storytelling.",
+    "video": "assets/video/ai-video-1.mp4",
+    "poster": "assets/video/ai-video-1.jpg",
+    "duration": "0:10"
+  },
+  {
+    "title": "AI Video Concept 2",
+    "category": "graphic",
+    "subcategory": "AI Video",
+    "description": "A short vertical AI-generated video concept, made for social media and brand storytelling.",
+    "video": "assets/video/ai-video-2.mp4",
+    "poster": "assets/video/ai-video-2.jpg",
+    "duration": "0:15"
+  },
+  {
+    "title": "AI Video Concept 3",
+    "category": "graphic",
+    "subcategory": "AI Video",
+    "description": "A short vertical AI-generated video concept, made for social media and brand storytelling.",
+    "video": "assets/video/ai-video-3.mp4",
+    "poster": "assets/video/ai-video-3.jpg",
+    "duration": "0:15"
+  },
+  {
+    "title": "AI Video Concept 4",
+    "category": "graphic",
+    "subcategory": "AI Video",
+    "description": "A short vertical AI-generated video concept, made for social media and brand storytelling.",
+    "video": "assets/video/ai-video-4.mp4",
+    "poster": "assets/video/ai-video-4.jpg",
+    "duration": "0:10"
+  },
+  {
+    "title": "Artham Infrastructure",
+    "category": "graphic",
+    "subcategory": "Brand Identity",
+    "description": "Artham Infrastructure needed a complete brand identity — logo, colours and visual system — to represent a growing infrastructure company.",
+    "challenge": "Stand out in a competitive, mostly unbranded industry where trust is everything.",
+    "approach": "I started by understanding their positioning, then researched how larger infrastructure and construction brands build trust visually through strong, geometric marks and confident colour palettes. The logo and system were designed to feel stable and credible.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131011/15_xmiwvw.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131109/16_p4c2nh.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131051/17_wihqa5.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131302/18_h2hspk.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131205/19_gfravp.png"
+    ],
+    "role": "Brand Designer",
+    "tools": [
+      "Illustrator",
+      "Photoshop"
+    ],
+    "outcome": "Designed a complete brand identity for Artham Infrastructure, including logo mark, colour palette and visual system built to feel solid, trustworthy and consistent across every touchpoint, from stationery to site signage."
+  },
+  {
+    "title": "Shri Amar Sai Resort",
+    "category": "graphic",
+    "subcategory": "Brand Identity",
+    "description": "Shri Amar Sai Resort needed a brand identity that reflects hospitality and comfort rather than a corporate feel.",
+    "challenge": "Build an emotional connection with guests before they even arrive, without a corporate look.",
+    "approach": "I researched how resort and hospitality brands use warmer colours, softer typography and welcoming visual cues. The logo and colour system were designed to feel inviting and premium at the same time, matching the resort's positioning.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131218/20_sayfit.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131173/21_zmjcju.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131233/22_egpp84.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131296/24_jvlr8q.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131332/23_m4rhns.png"
+    ],
+    "role": "Brand Designer",
+    "tools": [
+      "Illustrator",
+      "Photoshop"
+    ],
+    "outcome": "Designed a complete brand identity for Shri Amar Sai Resort, including logo mark, colour palette and visual system built to feel warm and inviting, carrying the resort's identity consistently across signage, print and digital touchpoints."
+  },
+  {
+    "title": "Bhavya Construction Management",
+    "category": "graphic",
+    "subcategory": "Brand Identity",
+    "description": "Bhavya Construction Management needed a brand identity that communicates reliability and scale in the project management niche.",
+    "challenge": "Most competitors in construction management looked either too corporate or too generic.",
+    "approach": "I researched competitor branding in the construction management space to find a visual gap, then designed a logo and colour system that feels modern without losing the industry's sense of seriousness. Every element was built to work at both large (signage) and small (business card) scale.",
+    "images": [
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131809/th_uun4hp.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131177/11_qcfbil.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786130990/13_cmrino.png",
+      "https://res.cloudinary.com/dk1kmgcqn/image/upload/v1786131059/14_u4mewq.png"
+    ],
+    "role": "Brand Designer",
+    "tools": [
+      "Illustrator",
+      "Photoshop"
+    ],
+    "outcome": "Designed a complete brand identity for Bhavya Construction Management, including logo mark, colour palette and visual system built to feel professional and dependable across print, digital and site branding."
+  },
+  {
+    "title": "Sign Up — E‑Commerce UI/UX Design",
+    "category": "uiux",
+    "subcategory": "UI/UX Design",
+    "description": "A clean and seamless authentication experience for web and mobile, designed for an e-commerce platform — covering desktop design, mobile responsiveness and user experience.",
+    "images": [
+      "assets/img/projects/signup-ecommerce-uiux.webp"
+    ],
+    "role": "UI/UX Designer",
+    "tools": [
+      "Figma",
+      "UI/UX Design"
+    ],
+    "challenge": "Signing in is the first moment of trust on an e-commerce platform, so it has to feel quick and unintimidating. The goal was an authentication flow that looks and works the same on desktop and on a phone.",
+    "approach": "I kept the form to the essentials: email, password, a clear primary “Sign in” button, a visible “Forgot password?” link, and one-tap Google and Facebook options under a simple “or” divider. A sign-up prompt sits right below for new users.<br><br>On desktop the form sits beside a large floral image panel; on mobile the same image becomes a header above the form, so the layout stays familiar across screens. The interface is light and minimal with a dark primary button, designed in Figma for both breakpoints."
+  },
+  {
+    "title": "SaaS Website UI/UX Design",
+    "category": "uiux",
+    "subcategory": "UI/UX Design",
+    "description": "A clean, modern and user-friendly website design for a SaaS product — focused on modern UI design, a better user experience and a scalable SaaS solution.",
+    "images": [
+      "assets/img/projects/saas-website-uiux.webp"
+    ],
+    "role": "UI/UX Designer",
+    "tools": [
+      "Figma",
+      "UI/UX Design"
+    ],
+    "challenge": "A SaaS homepage has to explain what the company does and give visitors a clear next step within seconds. The goal was a clean, modern website that does exactly that and can grow as the product grows.",
+    "approach": "I used a simple top navigation (About us, Services, Case Studies, Blog, How it Works, Hire) with one highlighted “Contact us” button. The hero pairs a short headline, “Great Product is built by great teams”, with one supporting line and a single “Let's get started!” call to action, next to an illustration of a team at work.<br><br>Generous white space and a blue-violet accent colour keep the page light and easy to scan."
+  },
+  {
+    "title": "Netflix — UI/UX Redesign",
+    "category": "uiux",
+    "subcategory": "UI/UX Design",
+    "description": "A modern, immersive and user-friendly streaming experience redesign — exploring a modern interface, a better user experience and more immersive entertainment browsing.",
+    "images": [
+      "assets/img/projects/netflix-uiux-redesign.webp"
+    ],
+    "role": "UI/UX Designer",
+    "tools": [
+      "Figma",
+      "UI/UX Design"
+    ],
+    "challenge": "A streaming catalogue is huge, so a redesign has to help people find something to watch quickly while keeping the experience cinematic. The goal was a modern, immersive interface that is easier to browse.",
+    "approach": "The home screen opens with a large featured title and clear actions: “Play Now”, “My List” and “Watch Trailer”. Genre chips (Sci-Fi & Fantasy, Action & Adventure, Thriller, Comedy, Drama, Documentary) sit directly underneath for quick filtering, followed by horizontal rows such as “Top 10 Movies” with ranked numbers, IMDb ratings and release year, and personalised rows like “Because You Watched The Witcher”.<br><br>A slim top navigation keeps Home, Movies, TV Shows, New & Popular, My List and Browse one tap away, with search, Kids and notifications on the right. A green primary button against the dark theme makes the main action stand out."
+  },
+  {
+    "title": "Cloud Raptor",
+    "category": "uiux",
+    "subcategory": "Website Development",
+    "description": "Marketing site for a global cloud & digital-transformation consultancy. Designed and built end-to-end, from Figma to a responsive HTML/CSS/JS live site.",
+    "images": [
+      "assets/img/projects/cloud-raptor.webp"
+    ],
+    "link": "https://cloud-raptor.com/",
+    "linkMode": true
+  },
+  {
+    "title": "The Social Bling",
+    "category": "uiux",
+    "subcategory": "Website Development",
+    "description": "Multi-page site for a digital marketing agency, with a dynamic filterable blog and SEO-structured pages. Designed and built end-to-end, from Figma to a responsive HTML/CSS/JS live site.",
+    "images": [
+      "assets/img/projects/the-social-bling.webp"
+    ],
+    "link": "https://thesocialbling.com/",
+    "linkMode": true
+  },
+  {
+    "title": "Shobha Motive",
+    "category": "uiux",
+    "subcategory": "Website Development",
+    "description": "Brand & product site for an AI automation and web studio. Designed and built end-to-end, from Figma to a responsive HTML/CSS/JS live site.",
+    "images": [
+      "assets/img/projects/shobha-motive.webp"
+    ],
+    "link": "https://shobhamotive.in/",
+    "linkMode": true
+  },
+  {
+    "title": "PawVerse",
+    "category": "uiux",
+    "subcategory": "Demo Projects",
+    "description": "Premium pet store concept with shop, vet booking and adoption in one place. Self-directed — designed and built solo, outside any client brief.",
+    "images": [
+      "assets/img/projects/pawverse.webp"
+    ],
+    "link": "https://pawversepreiumpetstore.netlify.app/",
+    "linkMode": true
+  },
+  {
+    "title": "HopeRise",
+    "category": "uiux",
+    "subcategory": "Demo Projects",
+    "description": "NGO concept site for a foundation running education, health and clean-water programs. Self-directed — designed and built solo, outside any client brief.",
+    "images": [
+      "assets/img/projects/hoperise.webp"
+    ],
+    "link": "https://hoperise-foundation-ngo-website.netlify.app/",
+    "linkMode": true
+  },
+  {
+    "title": "Lumea Beauty",
+    "category": "uiux",
+    "subcategory": "Demo Projects",
+    "description": "Vegan skincare brand concept with a clean, editorial storefront built to convert. Self-directed — designed and built solo, outside any client brief.",
+    "images": [
+      "assets/img/projects/lumea-beauty.webp"
+    ],
+    "link": "https://lumeabeautybrandwebsite.netlify.app/",
+    "linkMode": true
+  }
+];
+
+const BRANDS_DATA = [
+  "assets/img/brands/brand-01.png",
+  "assets/img/brands/brand-02.png",
+  "assets/img/brands/brand-03.png",
+  "assets/img/brands/brand-04.png",
+  "assets/img/brands/brand-05.png",
+  "assets/img/brands/brand-06.png",
+  "assets/img/brands/brand-07.png",
+  "assets/img/brands/brand-08.png",
+  "assets/img/brands/brand-09.png",
+  "assets/img/brands/brand-10.png",
+  "assets/img/brands/brand-11.png",
+  "assets/img/brands/brand-12.png",
+  "assets/img/brands/brand-13.png",
+  "assets/img/brands/brand-14.png",
+  "assets/img/brands/brand-15.png",
+  "assets/img/brands/brand-16.png",
+  "assets/img/brands/brand-17.png",
+  "assets/img/brands/brand-18.png",
+  "assets/img/brands/brand-19.png",
+  "assets/img/brands/brand-20.png",
+  "assets/img/brands/brand-21.png",
+  "assets/img/brands/brand-22.png",
+  "assets/img/brands/brand-23.png",
+  "assets/img/brands/brand-24.png",
+  "assets/img/brands/brand-25.png",
+  "assets/img/brands/brand-26.png",
+  "assets/img/brands/brand-27.png",
+  "assets/img/brands/brand-28.png",
+  "assets/img/brands/brand-29.png",
+  "assets/img/brands/brand-30.png",
+  "assets/img/brands/brand-31.png",
+  "assets/img/brands/brand-32.png",
+  "assets/img/brands/brand-33.png",
+  "assets/img/brands/brand-34.png",
+  "assets/img/brands/brand-35.png"
+];
+
+const TESTIMONIALS_DATA = [
+  {
+    "quote": "He is an exceptional graphic designer. His creativity, attention to detail, and ability to translate ideas into visually stunning designs are truly impressive, and he consistently delivers high-quality work, meets deadlines, and brings fresh, innovative perspectives to every project.",
+    "name": "Devashish Kumar",
+    "role": "Senior Engineer, Motherson Technology Services"
+  },
+  {
+    "quote": "Bittu is one of those rare creatives who just gets it. He has a sharp ability to understand the vision, sometimes before you've even fully explained it, and then brings it to life with precision and creativity.",
+    "name": "Aman Sharma",
+    "role": "Author, ERASED · managed Bittu directly"
+  },
+  {
+    "quote": "Bittu is insanely talented! His creativity, attention to detail, and ability to bring ideas to life are just next level. What I love most is how easy he is to work with: super adaptable, open to feedback, and always putting in the effort to make things even better.",
+    "name": "Mubaraka Kachwalla",
+    "role": "HR Executive, Bombay Tools Center"
+  },
+  {
+    "quote": "Bittu Rai is an exceptional Graphic Designer with a keen eye for detail and creativity. His ability to merge design with functionality sets him apart, making him a versatile asset to any team.",
+    "name": "Manish Kumar Sahu",
+    "role": "Java Software Engineer"
+  }
+];
+
+/* Merge real project + brand + testimonial data into the main site data object.
+   Kept in a separate file so the large project list doesn't clutter data.js. */
+if (typeof SITE_DATA !== 'undefined') {
+  SITE_DATA.projects = PROJECTS_DATA;
+  SITE_DATA.brands = BRANDS_DATA;
+  SITE_DATA.testimonials = TESTIMONIALS_DATA;
+}
