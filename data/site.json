@@ -1,0 +1,436 @@
+{
+ "person": {
+  "name": "Bittu Rai",
+  "year": "2026",
+  "phone": "+91 97716 04590",
+  "phoneHref": "tel:+919771604590",
+  "email": "bittu21126@gmail.com",
+  "portfolio": "bittu-portfolio-delta.vercel.app",
+  "whatsapp": "https://wa.me/919771604590",
+  "socials": {
+   "linkedin": "https://www.linkedin.com/in/bitttudesigner/",
+   "behance": "https://www.behance.net/bitttudesigner",
+   "instagram": "https://www.instagram.com/bitttudesigner/",
+   "github": "https://github.com/bitturai-automation"
+  }
+ },
+ "stats": [
+  {
+   "value": 50,
+   "suffix": "+",
+   "label": "Clients",
+   "sub": ""
+  },
+  {
+   "value": 1,
+   "suffix": "+",
+   "label": "Year",
+   "sub": "UI/UX Design"
+  },
+  {
+   "value": 1,
+   "suffix": "+",
+   "label": "Year",
+   "sub": "Website Development"
+  },
+  {
+   "value": 4,
+   "suffix": "+",
+   "label": "Years",
+   "sub": "Graphic Design"
+  }
+ ],
+ "bio": {
+  "positioning": "Product Designer and AI-assisted Vibe Coder who turns ideas and Figma designs into functional, responsive websites, combining UI/UX design, strong visual fundamentals and AI-assisted development.",
+  "body": "With 4+ years in graphic design, 1+ year in UI/UX design and 1+ year in website development, I've worked with 50+ clients across startups, agencies and NGOs. I take projects from UI/UX design and prototyping through Vibe Coding to a live website, turning messy briefs into something clear, consistent and easy to remember."
+ },
+ "services": [
+  {
+   "title": "Product & UI/UX Design",
+   "blurb": "Interfaces for web and mobile products, from user flows and wireframes to high-fidelity UI, prototypes and developer handoff in Figma.",
+   "tags": [
+    "User flows",
+    "Wireframes",
+    "Prototypes",
+    "High-fidelity UI"
+   ],
+   "mode": "uiux",
+   "cat": "UI/UX Design"
+  },
+  {
+   "title": "Website & Landing Page Design",
+   "blurb": "Responsive marketing sites and landing pages with a clear hierarchy, structured user journeys and a single next step for the visitor.",
+   "tags": [
+    "Landing pages",
+    "Responsive layouts",
+    "Design systems"
+   ],
+   "mode": "uiux",
+   "cat": "All",
+   "href": "#builds"
+  },
+  {
+   "title": "Vibe-Coded Website Development",
+   "blurb": "Figma designs turned into live, responsive websites using AI-assisted Vibe Coding, from design concept to delivery.",
+   "tags": [
+    "Design to code",
+    "HTML / CSS",
+    "Vibe Coding"
+   ],
+   "mode": "uiux",
+   "cat": "All",
+   "href": "#builds"
+  },
+  {
+   "title": "Graphic Design & Brand Identity",
+   "blurb": "Brand identities, social media campaigns, banners and promotional creatives for startups, agencies and NGOs.",
+   "tags": [
+    "Brand identity",
+    "Social media",
+    "Banners & print"
+   ],
+   "mode": "graphic",
+   "cat": "Brand Identity"
+  }
+ ],
+ "whoIHelp": [
+  "Startups",
+  "Founders",
+  "Marketing Agencies",
+  "NGOs & Foundations",
+  "Growing Businesses",
+  "Product Teams"
+ ],
+ "graphicCategories": [
+  "Social Media Design — Story",
+  "Social Media Design — Post",
+  "Posters & Banners",
+  "Website Banner Design",
+  "Printing Material",
+  "AI Video",
+  "Brand Identity"
+ ],
+ "uiuxCategories": [],
+ "brands": [
+  "assets/img/brands/brand-01.png",
+  "assets/img/brands/brand-02.png",
+  "assets/img/brands/brand-03.png",
+  "assets/img/brands/brand-04.png",
+  "assets/img/brands/brand-05.png",
+  "assets/img/brands/brand-06.png",
+  "assets/img/brands/brand-07.png",
+  "assets/img/brands/brand-08.png",
+  "assets/img/brands/brand-09.png",
+  "assets/img/brands/brand-10.png",
+  "assets/img/brands/brand-11.png",
+  "assets/img/brands/brand-12.png",
+  "assets/img/brands/brand-13.png",
+  "assets/img/brands/brand-14.png",
+  "assets/img/brands/brand-15.png",
+  "assets/img/brands/brand-16.png",
+  "assets/img/brands/brand-17.png",
+  "assets/img/brands/brand-18.png",
+  "assets/img/brands/brand-19.png",
+  "assets/img/brands/brand-20.png",
+  "assets/img/brands/brand-21.png",
+  "assets/img/brands/brand-22.png",
+  "assets/img/brands/brand-23.png",
+  "assets/img/brands/brand-24.png",
+  "assets/img/brands/brand-25.png",
+  "assets/img/brands/brand-26.png",
+  "assets/img/brands/brand-27.png",
+  "assets/img/brands/brand-28.png",
+  "assets/img/brands/brand-29.png",
+  "assets/img/brands/brand-30.png",
+  "assets/img/brands/brand-31.png",
+  "assets/img/brands/brand-32.png",
+  "assets/img/brands/brand-33.png",
+  "assets/img/brands/brand-34.png",
+  "assets/img/brands/brand-35.png"
+ ],
+ "process": [
+  {
+   "title": "Discover",
+   "text": "Understand the problem, audience, goals and context."
+  },
+  {
+   "title": "Define",
+   "text": "Turn the messy brief into a clear direction."
+  },
+  {
+   "title": "Design",
+   "text": "Explore concepts, systems, layouts and interactions."
+  },
+  {
+   "title": "Refine",
+   "text": "Test, iterate and polish."
+  },
+  {
+   "title": "Deliver",
+   "text": "Prepare final assets, prototypes and development-ready files."
+  }
+ ],
+ "education": [
+  {
+   "school": "Lingayas Vidyapeeth, Faridabad",
+   "program": "B.Tech in Computer Science",
+   "period": "2021–2025"
+  },
+  {
+   "school": "DAV Public School, Sector 4, Bokaro",
+   "program": "12th",
+   "period": "Completed 2021"
+  },
+  {
+   "school": "KV No. 1, Sector 4, Bokaro",
+   "program": "10th",
+   "period": "Completed 2019"
+  }
+ ],
+ "experience": [
+  {
+   "year": "",
+   "role": "Graphic Designer & Website Developer",
+   "org": "The Social Bling",
+   "note": "Present",
+   "bullets": [
+    "Design high-quality social media creatives, promotional graphics and brand-focused visual content.",
+    "Create AI-powered promotional videos, product advertisements and short-form video content.",
+    "Design and develop responsive websites using AI-assisted workflows and modern web design tools.",
+    "Maintain visual consistency across branding, social media campaigns and digital platforms."
+   ]
+  },
+  {
+   "year": "",
+   "role": "UI/UX & Graphic Designer",
+   "org": "Virtualyst",
+   "note": "",
+   "bullets": [
+    "Designed landing pages and UI components in Figma.",
+    "Created reusable design systems.",
+    "Supported design-to-development workflows."
+   ]
+  },
+  {
+   "year": "",
+   "role": "Creative Partner",
+   "org": "Creative Canvas",
+   "note": "",
+   "compact": true,
+   "bullets": [
+    "Developed brand identities and startup visuals.",
+    "Created digital marketing and website visual assets."
+   ]
+  },
+  {
+   "year": "",
+   "role": "Graphic Designer",
+   "org": "Adsstill Group",
+   "note": "",
+   "compact": true,
+   "bullets": [
+    "Designed social media campaigns and advertising creatives.",
+    "Created banners, promotional materials and branded digital assets."
+   ]
+  },
+  {
+   "year": "",
+   "role": "Graphic Designer",
+   "org": "StartupAccel",
+   "note": "",
+   "compact": true,
+   "bullets": [
+    "Designed branding and social media creatives.",
+    "Created promotional graphics for startup marketing campaigns."
+   ]
+  },
+  {
+   "year": "",
+   "role": "Graphic Designer",
+   "org": "Suvidha Foundation & Aashman Foundation",
+   "note": "",
+   "compact": true,
+   "bullets": [
+    "Designed awareness campaigns and event creatives.",
+    "Created digital communication and social media assets."
+   ]
+  }
+ ],
+ "certifications": [
+  {
+   "title": "Data Analytics Job Simulation",
+   "org": "Deloitte"
+  },
+  {
+   "title": "Graphic Designer",
+   "org": "LinkedIn"
+  },
+  {
+   "title": "Brand New Brand",
+   "org": "Coursera"
+  },
+  {
+   "title": "UI and UX Design",
+   "org": "ITRONIX"
+  },
+  {
+   "title": "Introduction to Graphic Design / Basics of UI/UX",
+   "org": ""
+  },
+  {
+   "title": "Advanced Prompt Engineering with ChatGPT",
+   "org": "UpGrad"
+  },
+  {
+   "title": "Element of Social Media Marketing",
+   "org": "CareerNinja"
+  }
+ ],
+ "tools": [
+  {
+   "name": "Figma",
+   "icon": "assets/img/tools/figma.png"
+  },
+  {
+   "name": "Adobe Illustrator",
+   "icon": "assets/img/tools/illustrator.png"
+  },
+  {
+   "name": "Adobe Photoshop",
+   "icon": "assets/img/tools/photoshop.png"
+  },
+  {
+   "name": "Canva",
+   "icon": "assets/img/tools/canva.png"
+  },
+  {
+   "name": "HTML5",
+   "icon": "assets/img/tools/html5.png"
+  },
+  {
+   "name": "CSS3",
+   "icon": "assets/img/tools/css3.png"
+  },
+  {
+   "name": "WordPress",
+   "icon": "assets/img/tools/wordpress.svg"
+  },
+  {
+   "name": "Webflow",
+   "icon": "assets/img/tools/webflow.svg"
+  },
+  {
+   "name": "ChatGPT",
+   "icon": "assets/img/tools/chatgpt.png"
+  },
+  {
+   "name": "Claude",
+   "icon": "assets/img/tools/claude-ai.png"
+  },
+  {
+   "name": "Gemini",
+   "icon": "assets/img/tools/gemini.png"
+  },
+  {
+   "name": "OpenAI",
+   "icon": "assets/img/tools/openai.png"
+  },
+  {
+   "name": "Lovable",
+   "icon": "assets/img/tools/lovable.png"
+  },
+  {
+   "name": "Adobe Firefly",
+   "icon": "assets/img/tools/firefly.png"
+  },
+  {
+   "name": "Whisk",
+   "icon": "assets/img/tools/whisk.png"
+  },
+  {
+   "name": "Blackbox AI",
+   "icon": "assets/img/tools/blackbox-ai.png"
+  },
+  {
+   "name": "Cursor",
+   "icon": ""
+  },
+  {
+   "name": "Google Flow",
+   "icon": ""
+  }
+ ],
+ "skills": [
+  {
+   "group": "Product & UI/UX design",
+   "items": [
+    "Product design",
+    "UI/UX design",
+    "User research",
+    "User flows & journey mapping",
+    "Information architecture",
+    "Wireframing & prototyping",
+    "Interaction design",
+    "Usability testing",
+    "Design systems & component libraries",
+    "Responsive design",
+    "Developer handoff"
+   ]
+  },
+  {
+   "group": "Visual design",
+   "items": [
+    "Graphic design",
+    "Brand identity",
+    "Social media & campaign design",
+    "Banners & promotional design",
+    "Landing page design"
+   ]
+  },
+  {
+   "group": "AI-assisted build",
+   "items": [
+    "Vibe Coding",
+    "AI-assisted design & development",
+    "Rapid prototyping",
+    "Prompt engineering",
+    "Design-to-code",
+    "HTML",
+    "CSS",
+    "WordPress & Webflow"
+   ]
+  }
+ ],
+ "toolGroups": [
+  {
+   "group": "Design tools",
+   "names": [
+    "Figma",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Canva"
+   ]
+  },
+  {
+   "group": "Build tools",
+   "names": [
+    "HTML5",
+    "CSS3",
+    "WordPress",
+    "Webflow",
+    "Cursor",
+    "Lovable"
+   ]
+  },
+  {
+   "group": "AI tools",
+   "names": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Google Flow"
+   ]
+  }
+ ],
+ "availabilityNote": "Open to Product Design, UI/UX, Vibe Coding & AI-assisted design roles · India"
+}
