@@ -1,0 +1,160 @@
+/* About → Contact redesign. Every class is new (s-*), plus the ruled brand wall (br-*). */
+.s-tags{display:flex;flex-wrap:wrap;gap:6px}
+.s-tags li{font-size:12.5px;border:1px solid currentColor;border-radius:99px;padding:3px 12px;opacity:.85}
+.s-link{display:inline-flex;gap:8px;margin-top:18px;font-weight:500;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:3px;transition:background-size .45s var(--ease)}
+.s-link b{font-weight:400;transition:transform .4s var(--ease)}
+@media(hover:hover){.s-link:hover{background-size:100% 1px}.s-link:hover b{transform:translateX(5px)}}
+.s-avail,.s-ct-avail{display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.4}
+.s-avail i,.s-ct-avail i{flex:none;width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(253,94,32,.6);animation:sPulse 2.2s ease-out infinite}
+.s-ct-avail i{background:var(--ink);box-shadow:0 0 0 0 rgba(12,12,11,.5)}
+@keyframes sPulse{70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+/* ---------- 04 About (dark) ---------- */
+.s-statement{max-width:26em;margin-bottom:clamp(40px,6vw,96px)}
+.s-ab{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,110px);align-items:start;padding-top:clamp(28px,3.5vw,48px);border-top:1px solid var(--line)}
+.s-ab-copy p:first-child{color:var(--mute);max-width:34rem;font-size:clamp(16px,1.15vw,18px);line-height:1.65}
+.s-ab-copy .s-avail{margin-top:clamp(22px,3vw,36px);padding:12px 18px;border:1px solid var(--line);border-radius:99px;width:fit-content;max-width:100%;color:var(--text)}
+.s-bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(150px,auto);gap:clamp(10px,1.2vw,16px)}
+.s-tile{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;padding:clamp(16px,1.8vw,26px);border:1px solid var(--line);border-radius:18px;background:var(--ink2);overflow:hidden;transition:border-color .4s,background-color .4s}
+.s-tile b{font:350 clamp(3rem,5.4vw,5.4rem)/.9 var(--serif);letter-spacing:-.045em}
+.s-tile em{font:italic 350 1.15rem var(--serif);color:var(--mute)}
+.s-tile span{font-size:14px;line-height:1.35;color:var(--mute)}
+.s-tile-hero{grid-column:1/-1;grid-row:span 2;background:var(--acc);border-color:var(--acc);color:var(--ink)}
+.s-tile-hero b{font-size:clamp(5.5rem,13vw,12rem)}
+.s-tile-hero span{color:rgba(12,12,11,.75);font-size:clamp(14px,1.2vw,17px);max-width:16rem}
+@media(hover:hover){.s-tile:not(.s-tile-hero):hover{border-color:var(--acc);background:#1d1c19}}
+.s-who{margin-top:clamp(56px,8vw,128px)}
+.s-who ul{display:flex;flex-wrap:wrap;gap:0 clamp(10px,1.6vw,26px);margin-top:18px;border-top:1px solid var(--line);padding-top:clamp(14px,2vw,26px)}
+.s-who li{display:flex;align-items:center;gap:clamp(10px,1.6vw,26px);font:340 clamp(2rem,5.6vw,5.4rem)/1.15 var(--serif);letter-spacing:-.035em}
+.s-who li span{transition:color .3s,font-style .3s}.s-who li i{font-size:.32em;color:var(--acc);transition:transform .6s var(--ease)}
+@media(hover:hover){.s-who li:hover span{color:var(--acc);font-style:italic}.s-who li:hover i{transform:rotate(180deg) scale(1.4)}}
+
+/* ---------- 05 What I do (paper) ---------- */
+.s-svc-list{border-bottom:1px solid rgba(12,12,11,.2)}
+.s-svc-row{position:relative;isolation:isolate;border-top:1px solid rgba(12,12,11,.2)}
+.s-svc-row::before{content:"";position:absolute;inset:0 calc(var(--pad)*-1);background:var(--acc);transform:scaleY(0);transform-origin:50% 100%;transition:transform .55s var(--ease);z-index:-1}
+.s-svc-row.on::before{transform:scaleY(1)}
+@media(hover:hover){.s-svc-row:not(.on):hover::before{transform:scaleY(1)}}
+.s-svc-btn{display:grid;grid-template-columns:clamp(2.6rem,5vw,5rem) minmax(0,1fr) auto;align-items:center;gap:clamp(8px,2vw,28px);width:100%;text-align:left;padding:clamp(22px,3vw,42px) 0}
+.s-svc-n{font:500 13px var(--sans);letter-spacing:.1em;align-self:start;padding-top:.9em}
+.s-svc-t{font:340 clamp(1.8rem,5vw,5rem)/1.02 var(--serif);letter-spacing:-.035em;transition:transform .6s var(--ease)}
+.s-svc-row.on .s-svc-t{font-style:italic}
+@media(hover:hover){.s-svc-row:hover .s-svc-t{transform:translateX(14px)}}
+.s-svc-i{position:relative;width:clamp(36px,4vw,56px);aspect-ratio:1;border:1px solid currentColor;border-radius:50%;transition:transform .6s var(--ease),background .3s,color .3s}
+.s-svc-i::before,.s-svc-i::after{content:"";position:absolute;left:50%;top:50%;width:38%;height:1.5px;background:currentColor;transform:translate(-50%,-50%);transition:transform .5s var(--ease)}
+.s-svc-i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.s-svc-row.on .s-svc-i{transform:rotate(180deg);background:var(--ink);color:var(--paper)}.s-svc-row.on .s-svc-i::after{transform:translate(-50%,-50%) rotate(0)}
+.s-svc-panel{overflow:hidden}
+.s-svc-in{display:grid;grid-template-columns:clamp(2.6rem,5vw,5rem) minmax(0,6fr) minmax(0,5fr);gap:clamp(8px,2vw,28px);padding:0 0 clamp(26px,3.4vw,46px)}
+.s-svc-in p{grid-column:2;font-size:clamp(16px,1.3vw,19px);line-height:1.55;max-width:34rem}
+.s-svc-in>div{grid-column:3}
+
+/* ---------- 06 How I work (dark) ---------- */
+.s-proc-wrap{position:relative}
+.s-rail{position:absolute;left:0;right:0;top:5px;height:1px;background:var(--line)}
+.s-rail i{position:absolute;inset:-1px 0;background:var(--acc);transform-origin:0 50%;height:3px}
+.s-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,2vw,32px)}
+.s-step{position:relative;display:grid;gap:10px;align-content:start;padding-top:clamp(30px,3.4vw,52px)}
+.s-dot{position:absolute;top:0;left:0;width:11px;height:11px;border-radius:50%;box-shadow:0 0 0 6px var(--ink);transform-origin:0 50%}
+.s-step-n{font:300 clamp(3.4rem,6.4vw,6.4rem)/.85 var(--serif);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(239,234,223,.45);transition:color .4s,-webkit-text-stroke-color .4s}
+.s-step b{font:350 clamp(1.5rem,2.3vw,2.2rem)/1.1 var(--serif);letter-spacing:-.02em;margin-top:8px;transition:color .3s}
+.s-step p{color:var(--mute);font-size:14.5px;line-height:1.55;max-width:18rem}
+@media(hover:hover){.s-step:hover .s-step-n{color:var(--acc);-webkit-text-stroke-color:var(--acc)}.s-step:hover b{color:var(--acc)}}
+
+/* ---------- 07 Experience (paper) ---------- */
+.s-xp-list{border-bottom:1px solid rgba(12,12,11,.2)}
+.s-xp-row{position:relative;isolation:isolate;display:grid;grid-template-columns:clamp(2.6rem,5vw,5rem) minmax(0,5fr) minmax(0,7fr);gap:12px clamp(16px,3.4vw,56px);padding:clamp(24px,3.2vw,46px) 0;border-top:1px solid rgba(12,12,11,.2);transition:color .4s}
+.s-xp-row::before{content:"";position:absolute;inset:0 calc(var(--pad)*-1);background:var(--ink);transform:scaleY(0);transform-origin:50% 100%;transition:transform .55s var(--ease);z-index:-1}
+@media(hover:hover){.s-xp-row:hover{color:var(--paper)}.s-xp-row:hover::before{transform:scaleY(1)}.s-xp-row:hover .s-xp-who p,.s-xp-row:hover .s-xp-pts li{color:rgba(239,234,223,.78)}}
+.s-xp-n{font:500 13px var(--sans);letter-spacing:.1em;padding-top:.7em;opacity:.6}
+.s-xp-who h3{font:340 clamp(1.6rem,3vw,2.8rem)/1.05 var(--serif);letter-spacing:-.03em}
+.s-xp-row.now .s-xp-who h3{font-size:clamp(2.1rem,4.4vw,4.2rem);letter-spacing:-.04em}
+.s-xp-who p{margin-top:10px;color:#55534a;font-size:15px;transition:color .4s}
+.s-xp-row.now .s-xp-who p{color:var(--ink);font-weight:500;font-size:clamp(16px,1.3vw,19px)}
+.s-xp-note{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--acc);color:var(--ink);font:500 13px/1 var(--sans);padding:8px 14px;border-radius:99px}
+.s-xp-note i{width:7px;height:7px;border-radius:50%;background:var(--ink);animation:sPulse 2.2s ease-out infinite;box-shadow:0 0 0 0 rgba(12,12,11,.5)}
+.s-xp-pts{display:grid;gap:9px;align-content:start;max-width:40rem}
+.s-xp-pts li{position:relative;padding-left:20px;font-size:15.5px;line-height:1.55;color:#2b2a26;transition:color .4s}
+.s-xp-pts li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:1px;background:currentColor}
+
+/* ---------- 08 Skills & tools (dark) ---------- */
+.s-sk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)}
+.s-sk-card{display:flex;flex-direction:column;gap:clamp(20px,2.4vw,34px);padding:clamp(20px,2.2vw,32px);border:1px solid var(--line);border-radius:22px;background:var(--ink2);transition:border-color .4s,background-color .4s}
+.s-sk-card header{display:flex;align-items:baseline;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.s-sk-card header span{font:500 12px var(--sans);letter-spacing:.1em;color:var(--acc)}
+.s-sk-card h3{font:350 clamp(1.4rem,2vw,1.9rem)/1.1 var(--serif);letter-spacing:-.02em}
+.s-sk-card ul{display:flex;flex-wrap:wrap;gap:8px}
+.s-sk-card li{font-size:14px;line-height:1;padding:9px 14px;border:1px solid var(--line);border-radius:99px;transition:background-color .3s,color .3s,border-color .3s}
+@media(hover:hover){.s-sk-card:hover{border-color:rgba(239,234,223,.3)}.s-sk-card li:hover{background:var(--acc);border-color:var(--acc);color:var(--ink)}}
+.s-tools{margin-top:clamp(48px,7vw,110px);border-top:1px solid var(--line)}
+.s-tools-row{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:16px clamp(20px,4vw,64px);align-items:center;padding:clamp(18px,2.4vw,32px) 0;border-bottom:1px solid var(--line)}
+.s-tools-row h3{font:350 clamp(1.2rem,1.8vw,1.7rem)/1.1 var(--serif)}
+.s-tools-row ul{display:flex;flex-wrap:wrap;gap:10px}
+.s-tools-row li{display:flex;align-items:center;gap:12px;padding:10px 18px 10px 12px;border-radius:14px;background:var(--paper);color:var(--ink);font-size:14px;font-weight:500;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.s-tools-row img{width:30px;height:30px;object-fit:contain;transition:transform .5s var(--ease)}
+.s-mono{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:500 14px var(--sans)}
+@media(hover:hover){.s-tools-row li:hover{box-shadow:0 0 0 2px var(--acc)}.s-tools-row li:hover img{transform:scale(1.18) rotate(-6deg)}}
+
+/* ---------- 09 Education (paper) ---------- */
+.s-edu-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:clamp(12px,1.6vw,24px)}
+.s-edu-card{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(40px,7vw,110px);min-height:clamp(260px,26vw,380px);padding:clamp(20px,2.4vw,34px);border:1px solid rgba(12,12,11,.22);border-radius:22px;transition:background-color .45s var(--ease),color .45s,border-color .45s}
+.s-edu-p{font:italic 340 clamp(1.7rem,3vw,3rem)/1 var(--serif);letter-spacing:-.03em;color:var(--acc)}
+.s-edu-card h3{font:350 clamp(1.4rem,2.1vw,2rem)/1.15 var(--serif);letter-spacing:-.02em}
+.s-edu-card p{margin-top:10px;font-size:14.5px;color:#55534a;transition:color .45s}
+.s-edu-card.feat{background:var(--ink);color:var(--paper);border-color:var(--ink)}.s-edu-card.feat p{color:rgba(239,234,223,.7)}
+.s-edu-card.feat h3{font-size:clamp(1.7rem,2.8vw,2.6rem)}
+@media(hover:hover){.s-edu-card:not(.feat):hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}.s-edu-card:not(.feat):hover p{color:rgba(239,234,223,.7)}}
+
+/* ---------- 10 Certifications (dark) ---------- */
+.s-cert-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.2vw,16px)}
+.s-cert-card{position:relative;display:flex;flex-direction:column;gap:12px;min-height:clamp(200px,17vw,260px);padding:clamp(16px,1.8vw,26px);border:1px solid var(--line);border-radius:18px;background:var(--ink2);transition:border-color .4s,background-color .4s}
+.s-cert-n{font:500 12px var(--sans);letter-spacing:.1em;color:var(--mute);transition:color .3s}
+.s-cert-card h3{margin-top:auto;font:350 clamp(1.15rem,1.55vw,1.5rem)/1.2 var(--serif);letter-spacing:-.015em}
+.s-cert-org{align-self:flex-start;font:500 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--line);border-radius:99px;color:var(--mute);transition:background-color .3s,color .3s,border-color .3s}
+@media(hover:hover){.s-cert-card:not(.total):hover{border-color:var(--acc);background:#1d1c19}.s-cert-card:not(.total):hover .s-cert-n{color:var(--acc)}.s-cert-card:not(.total):hover .s-cert-org{background:var(--acc);border-color:var(--acc);color:var(--ink)}}
+.s-cert-card.total{justify-content:flex-end;background:var(--acc);border-color:var(--acc);color:var(--ink)}
+.s-cert-card.total b{font:350 clamp(4rem,8vw,7.5rem)/.85 var(--serif);letter-spacing:-.05em}
+.s-cert-card.total span{font-size:14px}
+
+/* ---------- 11 Brands (paper): logos are white-background PNGs, multiplied into the paper and set on a ruled wall ---------- */
+.br-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid rgba(12,12,11,.2);border-left:1px solid rgba(12,12,11,.2)}
+.br-grid li{display:grid;place-items:center;aspect-ratio:3/2;padding:clamp(10px,1.4vw,20px);border-right:1px solid rgba(12,12,11,.2);border-bottom:1px solid rgba(12,12,11,.2);transition:background-color .35s var(--ease)}
+.br-grid img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+@media(hover:hover){.br-grid img{filter:grayscale(1) contrast(1.25);opacity:.88;transition:filter .35s var(--ease),opacity .35s var(--ease)}.br-grid li:hover{background:#fff}.br-grid li:hover img{filter:none;opacity:1}}
+
+/* ---------- 12 Contact (accent) ---------- */
+.s-ct-top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:clamp(20px,3vw,40px)}
+.s-ct-avail{max-width:26rem}
+.s-ct .mag{position:static}
+.s-orb{position:relative;display:grid;place-items:center;width:clamp(120px,12vw,180px);aspect-ratio:1;border-radius:50%;background:var(--ink);color:var(--paper);text-align:center;font:500 clamp(14px,1.2vw,17px)/1.25 var(--sans);transition:background-color .4s,color .4s}
+.s-orb b{position:absolute;right:22%;top:20%;font-weight:400;transition:transform .5s var(--ease)}
+@media(hover:hover){.s-orb:hover{background:var(--paper);color:var(--ink)}.s-orb:hover b{transform:translate(6px,-6px)}}
+.s-ct-mail{margin-bottom:clamp(28px,4vw,56px)}
+.s-ct-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.2vw,16px);margin-bottom:clamp(28px,4vw,48px)}
+.s-ct-grid a{position:relative;display:grid;gap:4px;padding:clamp(16px,1.8vw,24px);padding-right:clamp(44px,4vw,60px);border:1px solid rgba(12,12,11,.35);border-radius:16px;transition:background-color .4s,color .4s,border-color .4s}
+.s-ct-l{font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+.s-ct-v{font:350 clamp(1.15rem,1.7vw,1.6rem)/1.2 var(--serif);word-break:break-word}
+.s-ct-grid b{position:absolute;right:clamp(16px,1.8vw,24px);top:clamp(14px,1.6vw,22px);font-weight:400;font-size:1.2rem;transition:transform .5s var(--ease)}
+@media(hover:hover){.s-ct-grid a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}.s-ct-grid a:hover b{transform:translate(4px,-4px)}}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1100px){.br-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.s-cert-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.s-sk-grid{grid-template-columns:1fr 1fr}.s-sk-card:last-child{grid-column:1/-1}}
+@media(max-width:1000px){
+  .s-ab{grid-template-columns:1fr}
+  .s-steps{grid-template-columns:1fr;gap:0}
+  .s-rail{left:5px;right:auto;top:0;bottom:0;width:1px;height:auto}.s-rail i{inset:0 -1px;width:3px;height:auto;transform-origin:50% 0}
+  .s-step{padding:0 0 clamp(28px,6vw,40px) 36px}.s-dot{top:8px;left:0}
+  .s-edu-grid{grid-template-columns:1fr}.s-edu-card{min-height:0;gap:40px}
+}
+@media(max-width:760px){
+  .br-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.br-grid li:last-child{grid-column:span 2;aspect-ratio:auto}.br-grid li:last-child img{width:50%}
+  .s-xp-row{grid-template-columns:2.4rem minmax(0,1fr)}.s-xp-pts{grid-column:2}
+  .s-svc-in{grid-template-columns:2.6rem minmax(0,1fr)}.s-svc-in p,.s-svc-in>div{grid-column:2}
+  .s-sk-grid{grid-template-columns:1fr}.s-sk-card:last-child{grid-column:auto}
+  .s-tools-row{grid-template-columns:1fr}
+  .s-cert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .s-ct-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .s-ct-top{flex-direction:column-reverse;align-items:flex-start}
+}
+@media(max-width:480px){.s-bento{grid-template-columns:repeat(2,minmax(0,1fr))}.s-cert-grid,.s-ct-grid{grid-template-columns:1fr}.s-cert-card{min-height:150px}}
+@media(prefers-reduced-motion:reduce){.s-avail i,.s-ct-avail i,.s-xp-note i{animation:none}.s-svc-t,.s-tools-row img,.s-who li i{transition:none;transform:none!important}}
